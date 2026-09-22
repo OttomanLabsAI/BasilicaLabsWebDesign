@@ -5,32 +5,25 @@
   Permissions-Policy: geolocation=(), microphone=(), camera=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains
 
-# Fonts and images never change in place - give a changed file a new name.
-# (Each path gets exactly one Cache-Control rule: Cloudflare joins the values
-# of overlapping rules, so a catch-all /assets/* rule would clash below.)
+# Fonts and images never change in place - a changed file gets a new name.
+# (One Cache-Control rule per path: Cloudflare joins the values of
+# overlapping rules, so there is no catch-all /assets/* rule.)
 /assets/fonts/*
   Cache-Control: public, max-age=31536000, immutable
 
-/assets/og/*
+/assets/img/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Stylesheets and scripts keep their names between releases, so they
+# The stylesheet and script keep their names between releases, so they
 # revalidate like the HTML does and a deploy shows up straight away.
-/assets/styles.css
-  Cache-Control: public, max-age=0, must-revalidate
-
 /assets/css/*
   Cache-Control: public, max-age=0, must-revalidate
 
 /assets/js/*
   Cache-Control: public, max-age=0, must-revalidate
 
-# HTML must stay fresh so a deploy is visible immediately.
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
 
 /
-  Cache-Control: public, max-age=0, must-revalidate
-
-/contact
   Cache-Control: public, max-age=0, must-revalidate

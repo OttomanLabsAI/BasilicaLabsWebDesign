@@ -1,10 +1,8 @@
-# BasilicaLabs.AI — Website Design
+# BasilicaLabs Web Design
 
-The dedicated site for the BasilicaLabs.AI web design service: new builds from
-scratch, or an existing site rebuilt properly. It carries everything on
-[basilicalabs.ai/website-design](https://basilicalabs.ai/website-design) — how it
-works, the build, the price, ownership, referrals and the portfolio — in the
-same design as basilicalabs.ai.
+The sales site for the BasilicaLabs.AI web design service: new websites and
+rebuilds, designed, built and live on a temporary link the same day. One page
+that makes the case and takes the brief, plus a themed 404.
 
 It is a Cloudflare Workers static-assets site. There is no build step: the files
 in `public/` are the site.
@@ -13,79 +11,88 @@ in `public/` are the site.
 
 ```
 public/
-  index.html               the service page (home)
-  contact.html             the enquiry form and direct email
-  404.html                 themed not-found page (root-absolute paths)
+  index.html              the sales page: hero, work, process, what you get,
+                          how it's done, comparison, ownership, FAQ,
+                          referrals, and the brief form
+  404.html                themed not-found page (root-absolute paths)
   favicon.ico
   robots.txt
-  _headers                 security + caching headers
+  _headers                security + caching headers
+  _redirects              v1's /contact paths → the brief form
   assets/
-    styles.css             the basilicalabs.ai design system, byte-identical copy
-    css/fonts.css          self-hosted Afacad Flux, Newsreader and Prata
-    css/website-design.css the service page's own styles, moved out verbatim
-    css/contact.css        the contact page's own styles, moved out verbatim
-    js/theme-preload.js    restores a saved dark theme before first paint
-    js/site.js             the light/dark toggle
-    js/contact.js          the contact form: FormSubmit, falling back to email
-    fonts/                 Flux plus the Google Fonts files, self-hosted
-    og/                    portfolio screenshots
-    favicon.svg, favicon-180.png
-wrangler.jsonc             assets-only config, no Worker script
-package.json               wrangler devDependency + dev/deploy/check scripts
+    css/site.css          the whole design system
+    js/site.js            header state, showcase carousel, scroll reveals,
+                          the brief form
+    fonts/                Flux, Instrument Sans, Instrument Serif italic
+    img/work/             portfolio screenshots, WebP at 800 and 1400 wide
+    img/share.jpg         link-preview card, 1200 × 630
+    img/favicon.svg, img/apple-touch-icon.png
+wrangler.jsonc            assets-only config, no Worker script
+package.json              wrangler devDependency + dev/deploy/check scripts
 ```
 
 ## Local development
 
 ```bash
 npm install
-npm run dev          # wrangler dev, serves public/ with _headers applied
+npm run dev          # wrangler dev, with _headers and _redirects applied
 npm run check        # wrangler deploy --dry-run
 ```
 
-Any static server pointed at `public/` also works.
+Any static server pointed at `public/` also works, minus the redirects.
 
 ## Deployment
 
-Connect the repository once in the Cloudflare dashboard: Workers & Pages →
-Create → Import a repository. From then on Workers Builds deploys every push to
-`main`. Add the custom domain under the Worker's Settings → Domains & Routes.
+The repository is connected to Cloudflare Workers Builds, which deploys every
+push to `main`. The Worker's name in the dashboard must match `name` in
+`wrangler.jsonc` (`basilicalabswebdesign`). Add the custom domain under the
+Worker's Settings → Domains & Routes.
 
-## The design comes from basilicalabs.ai
+## Design
 
-- `public/assets/styles.css` is a byte-identical copy of `assets/styles.css`
-  from the basilicalabs.ai repository (OttomanLabsAI/OttomanLabs.AI). To pick up
-  a change there, copy the file over unchanged.
-- `website-design.css` and `contact.css` are the inline `<style>` blocks of
-  `website-design.html` and `contact.html` in that repository, moved out
-  verbatim.
-- The typefaces are the same files basilicalabs.ai loads: Flux is its own
-  embedded font, and Afacad Flux, Newsreader and Prata are the exact Google
-  Fonts files, self-hosted with the same weights and unicode ranges. The pages
-  make no third-party requests to render. All three Google families are under
-  the SIL Open Font License.
+- **Type.** Flux, the BasilicaLabs.AI brand face, sets the wordmark and every
+  heading. It has one weight (500), so nothing is ever set bold in it.
+  Instrument Serif italic sets "Web Design" under the wordmark and one accent
+  phrase per heading. Instrument Sans sets everything else. All three are
+  self-hosted; Instrument Sans and Serif are SIL Open Font License.
+- **Colour.** Ink `#111114`, paper `#F6F3EC`, a second paper `#ECE7DC` for
+  alternate bands, and one signal orange: `#FF5B24` for fills and for text on
+  ink, `#C2410C` for orange text on paper. Every text pairing meets WCAG AA.
+- **Motion.** A crossfading showcase of the four sites, gentle floating cards,
+  a flowing lane diagram and scroll reveals. All of it stops under
+  `prefers-reduced-motion`, and with no script every section is visible.
+
+## Content rules
+
+- No pricing anywhere on the site: no amounts, quotes, fees, "free" offers or
+  cost comparisons. Prices are discussed one to one.
+- Client-facing wording follows the owner's the-sell vocabulary: agreement not
+  contract, premium not expensive, opportunity not options, investment not
+  cost.
+- Every claim comes from the service as the owner describes it. No invented
+  testimonials, figures or clients.
 
 ## External resources
 
-- **Share image.** `og:image` points at
-  `https://basilicalabs.ai/assets/og/og-website-design.png`, the card
-  basilicalabs.ai already serves for this page. Keep that file on
-  basilicalabs.ai, or copy it into `public/assets/og/` and point the tag at
-  this site's own domain once it has one.
-- **Contact form.** Messages post to `https://formsubmit.co/ajax/fid_kk@proton.me`,
-  the same service the basilicalabs.ai contact page uses. If it is blocked or
-  refuses a message, the visitor's mail app opens with the message filled in.
-  FormSubmit may ask the inbox to confirm the form once for a new domain: send
-  one test message after the domain goes live and click the activation link.
-- **Links out.** The four portfolio sites, basilicalabs.ai, the CV on
-  basilicalabs.ai, GitHub, YouTube, LinkedIn, Instagram and Telegram.
+- **Brief form.** Posts to `https://formsubmit.co/ajax/fid_kk@proton.me`. If the
+  service is blocked, refuses the brief or still needs its one-time
+  confirmation, the visitor's email app opens with the brief filled in. After
+  the domain goes live, send one test brief and click FormSubmit's activation
+  link in the inbox.
+- **Share image.** `og:image` points at `public/assets/img/share.jpg` in this
+  repository through jsDelivr's GitHub CDN, because link previews need an
+  absolute address and the site has no domain yet.
+- **Links out.** The four portfolio sites, basilicalabs.ai, GitHub, YouTube,
+  LinkedIn, Instagram and Telegram.
 
 ## When the domain is chosen
 
-Add to the `<head>` of `index.html` and `contact.html`:
+In the `<head>` of `index.html`:
 
 ```html
 <link rel="canonical" href="https://<domain>/">
 <meta property="og:url" content="https://<domain>/">
 ```
 
-and a `Sitemap:` line to `public/robots.txt` if a sitemap is added.
+Point `og:image` and `twitter:image` at `https://<domain>/assets/img/share.jpg`,
+and add a `Sitemap:` line to `robots.txt` if a sitemap is added.

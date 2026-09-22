@@ -1,238 +1,444 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BasilicaLabs Web Design — Your new website, live today</title>
+<meta name="description" content="New websites and rebuilds, designed, built and live on a temporary link the same day you brief me. Try it before you commit, then take it live on your own domain — every file yours.">
+<meta name="theme-color" content="#111114">
 <link rel="icon" href="favicon.ico" sizes="32x32">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/favicon-180.png">
-<title>Website Design — BasilicaLabs.AI</title>
-<meta name="description" content="Websites designed and built by Fadil Karim — new builds from scratch, or your existing site rebuilt properly. Art-directed, hand-coded, live on your own domain in days. Get in touch for a quote.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="BasilicaLabs.AI">
-<meta property="og:title" content="Website Design — BasilicaLabs.AI">
-<meta property="og:description" content="New builds from scratch, or your existing site rebuilt properly. Hand-coded, art-directed, live on your own domain in days.">
-<meta property="og:image" content="https://basilicalabs.ai/assets/og/og-website-design.png">
-<meta property="og:image:width" content="2400">
-<meta property="og:image:height" content="1260">
+<meta property="og:site_name" content="BasilicaLabs Web Design">
+<meta property="og:title" content="BasilicaLabs Web Design — Your new website, live today">
+<meta property="og:description" content="Brief me in one line and see your new site live the same day. Try it before you commit — every file yours.">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/OttomanLabsAI/BasilicaLabsWebDesign@main/public/assets/img/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="BasilicaLabs Web Design — your new website, live today.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://basilicalabs.ai/assets/og/og-website-design.png">
-<link rel="preload" href="assets/fonts/Flux-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/newsreader-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/prata-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/fonts.css">
-<link rel="stylesheet" href="assets/styles.css">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/OttomanLabsAI/BasilicaLabsWebDesign@main/public/assets/img/share.jpg">
+<link rel="preload" href="assets/fonts/flux.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/site.js" defer></script>
-<link rel="stylesheet" href="assets/css/website-design.css">
-<script src="assets/js/theme-preload.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="masthead wrap">
-  <a class="brand" href="./" aria-label="BasilicaLabs.AI Website Design — home">BasilicaLabs.AI<svg class="sparks" viewBox="0 0 100 100" aria-hidden="true" fill="currentColor"><path transform="translate(52 0) scale(0.30)" d="M50 0C54 32 68 46 100 50 68 54 54 68 50 100 46 68 32 54 0 50 32 46 46 32 50 0Z"/><path transform="translate(0 22) scale(0.60)" d="M50 0C54 32 68 46 100 50 68 54 54 68 50 100 46 68 32 54 0 50 32 46 46 32 50 0Z"/><path transform="translate(60 56) scale(0.40)" d="M50 0C54 32 68 46 100 50 68 54 54 68 50 100 46 68 32 54 0 50 32 46 46 32 50 0Z"/></svg></a>
-  <nav class="nav-row" aria-label="Sections">
-    <a href="./" aria-current="page">Home</a>
-    <a href="contact.html">Contact</a>
-    <a class="ig-link" href="https://instagram.com/fid_900" target="_blank" rel="noopener" aria-label="Instagram — fid_900"><svg class="ig-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.6"/><circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/></svg>fid_900</a>
-    <a class="ig-link" href="https://instagram.com/ottomanlabs.ai" target="_blank" rel="noopener" aria-label="Instagram — ottomanlabs.ai"><svg class="ig-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.6"/><circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/></svg>ottomanlabs.ai</a>
-    <button class="theme-toggle" id="themeToggle" aria-pressed="false" title="Toggle light / dark"><span class="th-dot" aria-hidden="true"></span><span id="themeLabel">Dark</span></button>
-  </nav>
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a class="logo" href="./" aria-label="BasilicaLabs Web Design — home">
+      <span class="w">BasilicaLabs</span>
+      <span class="d">Web Design</span>
+    </a>
+    <nav aria-label="Sections">
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#process">How it works</a></li>
+        <li><a href="#included">What you get</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="#start">Get my preview</a>
+  </div>
 </header>
 
-<main id="main" class="wrap">
+<main id="main">
 
-  <div class="hero">
-    <span><span class="ital">Website</span> <span class="display">DESIGN</span></span>
-    <span class="sub">new builds &amp; rebuilds &middot; art-directed, hand-coded &middot; live on your own domain</span>
-    <span class="wd-chip">Built to order</span>
-  </div>
+  <!-- ════════ HERO ════════ -->
+  <section class="hero dark" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Web design · new builds &amp; rebuilds</p>
+          <h1 id="hero-title">Your new website, <span class="accent nowrap">live today.</span></h1>
+          <p class="lede">Send me one line about your business. I’ll design and build your site and put it live on a temporary link the same day. Love it, and it moves to your own domain and becomes yours. If not, you walk away.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#start">Get my preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn-ghost" href="#work">See the work</a>
+          </div>
+          <ul class="assure">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Live on a temporary link the same day</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Try before you buy — no lock-in</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Every file is yours to keep</li>
+          </ul>
+        </div>
 
-  <h1 class="wd-head">A better website,<br>on your screen <span class="yl">today.</span></h1>
-
-  <span class="wd-tab" id="how">How it works</span>
-  <div class="wd-steps">
-    <div class="wd-step"><span class="wd-no">01</span><h4>Brief me <span class="arr">&rarr;</span></h4>
-      <p>A line about your business or your current site.</p></div>
-    <div class="wd-step"><span class="wd-no">02</span><h4>Live same day <span class="arr">&rarr;</span></h4>
-      <p>Working, online, on a temporary link.</p></div>
-    <div class="wd-step"><span class="wd-no">03</span><h4>Changes <span class="arr">&rarr;</span></h4>
-      <p>Turned around in hours, not weeks.</p></div>
-    <div class="wd-step"><span class="wd-no">04</span><h4>Pay on transfer <span class="arr">&rarr;</span></h4>
-      <p>To your domain &mdash; only if you want it.</p></div>
-    <div class="wd-step"><span class="wd-no">05</span><h4>Ongoing changes</h4>
-      <p>Optional &mdash; a fortnight of unlimited changes whenever you want one.</p></div>
-  </div>
-
-  <div class="wd-build-wrap" id="build">
-    <span class="wd-tab">Start here</span>
-    <div class="wd-build">
-      <div class="wd-bhead">
-        <span class="wd-btitle">The Build</span>
-        <span class="wd-day">
-          <span class="big">Day 1</span><span class="cap">Live on a temporary link</span>
-          <span class="big">Nothing</span><span class="cap">To pay until transfer of ownership</span>
-        </span>
+        <figure class="showcase" aria-label="Recent sites, shown in turn">
+          <div class="float a"><small>Morning</small>Your one-line brief</div>
+          <div class="browser">
+            <div class="browser-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url">https://<b data-url>tiatandyrugby.com</b></span></div>
+            <div class="screen">
+              <img class="on" src="assets/img/work/tia-tandy-1400.webp" srcset="assets/img/work/tia-tandy-800.webp 800w, assets/img/work/tia-tandy-1400.webp 1400w" sizes="(max-width: 980px) 92vw, 600px" width="1400" height="735" alt="The Tia Tandy Rugby homepage" data-url="tiatandyrugby.com" fetchpriority="high" decoding="async">
+              <img src="assets/img/work/jaded-rose-1400.webp" srcset="assets/img/work/jaded-rose-800.webp 800w, assets/img/work/jaded-rose-1400.webp 1400w" sizes="(max-width: 980px) 92vw, 600px" width="1400" height="735" alt="The Jaded Rose online shop" data-url="jadedrose.co.uk" decoding="async">
+              <img src="assets/img/work/visual-neuroscience-1400.webp" srcset="assets/img/work/visual-neuroscience-800.webp 800w, assets/img/work/visual-neuroscience-1400.webp 1400w" sizes="(max-width: 980px) 92vw, 600px" width="1400" height="735" alt="The Visual Neuroscience 3D brain atlas" data-url="visualneuroscience.ai" decoding="async">
+              <img src="assets/img/work/basilicalabs-1400.webp" srcset="assets/img/work/basilicalabs-800.webp 800w, assets/img/work/basilicalabs-1400.webp 1400w" sizes="(max-width: 980px) 92vw, 600px" width="1400" height="735" alt="The BasilicaLabs.AI homepage" data-url="basilicalabs.ai" decoding="async">
+            </div>
+          </div>
+          <div class="float b"><small>Same day</small><span><i class="live-dot" aria-hidden="true"></i>Live on a temporary link</span></div>
+          <div class="slide-dots" hidden>
+            <button type="button" aria-label="Show Tia Tandy Rugby" aria-current="true"></button>
+            <button type="button" aria-label="Show Jaded Rose" aria-current="false"></button>
+            <button type="button" aria-label="Show Visual Neuroscience" aria-current="false"></button>
+            <button type="button" aria-label="Show BasilicaLabs.AI" aria-current="false"></button>
+          </div>
+        </figure>
       </div>
-      <div class="wd-feats">
-        <div class="wd-feat"><h4>Quality</h4>
-          <p class="lead">Professional design for modern times.</p>
-          <p class="det">Custom type, strong layouts &mdash; looks ten times the price.</p></div>
-        <div class="wd-feat"><h4>Speed</h4>
-          <p class="lead">Same-day service on the first design.</p>
-          <p class="det">Brief me in the morning &mdash; changes turn around in hours.</p></div>
-        <div class="wd-feat"><h4>Versatility</h4>
-          <p class="lead">Any design, styling or feature.</p>
-          <p class="det">Apple-store scrolling, 3D models, dynamic lighting.</p></div>
-        <div class="wd-feat"><h4>Modern connectivity</h4>
-          <p class="lead">Bookings, contact and online sales.</p>
-          <p class="det">Calendars, inbox forms, payment-ready shop pages.</p></div>
-        <div class="wd-feat"><h4>Low cost</h4>
-          <p class="lead">Built by my network of AI agents.</p>
-          <p class="det">Heavy lifting in parallel, finished by hand &mdash; agency output without the agency invoice.</p></div>
+
+      <div class="proof">
+        <span class="label">Recent builds</span>
+        <a href="https://tiatandyrugby.com" target="_blank" rel="noopener">tiatandyrugby.com<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        <a href="https://jadedrose.co.uk" target="_blank" rel="noopener">jadedrose.co.uk<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        <a href="https://visualneuroscience.ai" target="_blank" rel="noopener">visualneuroscience.ai<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        <a href="https://basilicalabs.ai" target="_blank" rel="noopener">basilicalabs.ai<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
       </div>
-      <a class="wd-say" href="contact.html">Say the word &mdash; start the conversation</a>
     </div>
-  </div>
+  </section>
 
-  <div class="wd-band-wrap" id="price">
-    <span class="wd-tab">What it costs</span>
-    <div class="wd-band">
-      <span class="lede-cap">One number,<br>nothing monthly</span>
-      <span class="fig"><span class="was">&pound;1,500 to &pound;8,000</span>
-        <span class="cap">What others charge &middot; freelance to agency</span></span>
-      <span class="col"><h4>Your price</h4>
-        <p>A fixed quote, agreed before any work starts &mdash; and a fraction of the above.</p></span>
-      <a class="wd-quote-btn" href="contact.html">Ask for a quote &rarr;</a>
+  <!-- ════════ PROMISE ════════ -->
+  <section class="section" aria-label="The promise">
+    <div class="wrap stats">
+      <div class="stat" data-reveal><span class="big">Day 1</span><p>Your site is live on a temporary link the same day you brief me.</p></div>
+      <div class="stat" data-reveal><span class="big">Hours</span><p>Changes come back in hours, not weeks.</p></div>
+      <div class="stat" data-reveal><span class="big">Every <em>file</em></span><p>Yours outright once it moves to your domain, with no lock-in.</p></div>
     </div>
-  </div>
+  </section>
 
-  <div class="wd-band-wrap" id="ownership">
-    <span class="wd-tab">Ownership</span>
-    <div class="wd-band">
-      <span class="lede-cap">You own<br>everything</span>
-      <span class="col"><h4>The code</h4><p>Every file &mdash; yours outright.</p></span>
-      <span class="col"><h4>The host</h4><p>Free web hosting for life &mdash; on Cloudflare.</p></span>
-      <span class="col"><h4>The setup</h4><p>I set it up and transfer to you &mdash; nothing to learn.</p></span>
+  <!-- ════════ WORK ════════ -->
+  <section class="section" id="work" aria-labelledby="work-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Recent work</p>
+        <h2 class="h2" id="work-title">Sites built <em>end to end.</em></h2>
+        <p class="lede">Designed, built and shipped from the first line to launch — each one live on its own domain.</p>
+      </div>
+      <div class="work-grid">
+        <article class="work" data-reveal>
+          <div class="browser"><div class="browser-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url">https://<b>tiatandyrugby.com</b></span></div>
+            <div class="screen"><img src="assets/img/work/tia-tandy-800.webp" srcset="assets/img/work/tia-tandy-800.webp 800w, assets/img/work/tia-tandy-1400.webp 1400w" sizes="(max-width: 820px) 92vw, 600px" width="1400" height="735" alt="The Tia Tandy Rugby homepage" loading="lazy" decoding="async"></div></div>
+          <div class="work-body">
+            <div class="tags"><span>Athlete site</span><span>Built from scratch</span></div>
+            <h3>Tia Tandy Rugby</h3>
+            <p>Her story, achievements and match photos, laid out like a matchday programme — with a next-match bar supporters check from their phone, and sponsor pages ready to sell.</p>
+            <a class="visit" href="https://tiatandyrugby.com" target="_blank" rel="noopener">Visit the site<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+          </div>
+        </article>
+        <article class="work" data-reveal>
+          <div class="browser"><div class="browser-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url">https://<b>jadedrose.co.uk</b></span></div>
+            <div class="screen"><img src="assets/img/work/jaded-rose-800.webp" srcset="assets/img/work/jaded-rose-800.webp 800w, assets/img/work/jaded-rose-1400.webp 1400w" sizes="(max-width: 820px) 92vw, 600px" width="1400" height="735" alt="The Jaded Rose online shop" loading="lazy" decoding="async"></div></div>
+          <div class="work-body">
+            <div class="tags"><span>Fashion e-commerce</span><span>Custom theme</span></div>
+            <h3>Jaded Rose</h3>
+            <p>A custom theme designed to the brand, while products, checkout and orders carried on untouched underneath. Their own ideas, briefed in plain English and live in days.</p>
+            <a class="visit" href="https://jadedrose.co.uk" target="_blank" rel="noopener">Visit the site<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+          </div>
+        </article>
+        <article class="work" data-reveal>
+          <div class="browser"><div class="browser-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url">https://<b>visualneuroscience.ai</b></span></div>
+            <div class="screen"><img src="assets/img/work/visual-neuroscience-800.webp" srcset="assets/img/work/visual-neuroscience-800.webp 800w, assets/img/work/visual-neuroscience-1400.webp 1400w" sizes="(max-width: 820px) 92vw, 600px" width="1400" height="735" alt="The Visual Neuroscience 3D brain atlas" loading="lazy" decoding="async"></div></div>
+          <div class="work-body">
+            <div class="tags"><span>Education</span><span>3D brain atlas</span></div>
+            <h3>Visual Neuroscience</h3>
+            <p>A real 3D brain students can spin, slice and explore right in the browser, with every region explained as they click it. Nothing to install, and it runs on any laptop.</p>
+            <a class="visit" href="https://visualneuroscience.ai" target="_blank" rel="noopener">Visit the site<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+          </div>
+        </article>
+        <article class="work" data-reveal>
+          <div class="browser"><div class="browser-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url">https://<b>basilicalabs.ai</b></span></div>
+            <div class="screen"><img src="assets/img/work/basilicalabs-800.webp" srcset="assets/img/work/basilicalabs-800.webp 800w, assets/img/work/basilicalabs-1400.webp 1400w" sizes="(max-width: 820px) 92vw, 600px" width="1400" height="735" alt="The BasilicaLabs.AI homepage" loading="lazy" decoding="async"></div></div>
+          <div class="work-body">
+            <div class="tags"><span>Studio site</span><span>Built from scratch</span></div>
+            <h3>BasilicaLabs.AI</h3>
+            <p>Live 3D building models you can spin and export, sign-in accounts, a newsletter, video players and a stock-research tool. The same craft your site gets.</p>
+            <a class="visit" href="https://basilicalabs.ai" target="_blank" rel="noopener">Visit the site<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+          </div>
+        </article>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="wd-band-wrap" id="referrals">
-    <span class="wd-tab">Referrals</span>
-    <div class="wd-band">
-      <span class="lede-cap">Send a friend</span>
-      <span class="col"><h4>The thank-you</h4>
-        <p>A cash reward for every site bought on your word &mdash; more once you&rsquo;re a customer yourself.</p></span>
-      <span class="stepline">
-        <span class="st"><small>Step 1</small>Pass this page on</span><span class="arr">&rarr;</span>
-        <span class="st"><small>Step 2</small>They buy a site</span><span class="arr">&rarr;</span>
-        <span class="st"><small>Step 3</small>You get paid</span>
-      </span>
+  <!-- ════════ PROCESS ════════ -->
+  <section class="section alt" id="process" aria-labelledby="process-title">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">How it works</p>
+        <h2 class="h2" id="process-title">From one line to live, <em>in a day.</em></h2>
+        <p class="lede">You brief me in a line, see your site working the same day, and only take it on if you love it.</p>
+      </div>
+      <ol class="steps">
+        <li class="step today" data-reveal><span class="flag">Today</span><span class="no">01</span><h3>Brief me</h3><p>One line about your business, or a link to the site you have now.</p></li>
+        <li class="step today" data-reveal><span class="flag">Today</span><span class="no">02</span><h3>Live the same day</h3><p>Your new site, working and online on a temporary link.</p></li>
+        <li class="step" data-reveal><span class="no">03</span><h3>Changes in hours</h3><p>Tell me what to change. It comes back in hours, not weeks.</p></li>
+        <li class="step" data-reveal><span class="no">04</span><h3>Take ownership</h3><p>It moves to your own domain and becomes yours — only if you want it.</p></li>
+        <li class="step optional" data-reveal><span class="flag">Optional</span><span class="no">05</span><h3>Ongoing changes</h3><p>A fortnight of unlimited changes, whenever you want one.</p></li>
+      </ol>
     </div>
-  </div>
+  </section>
 
-  <div class="wd-strip"><span>Quoted up front &middot; Try before you buy</span><span>No retainers &middot; No lock-in</span></div>
+  <!-- ════════ WHAT YOU GET ════════ -->
+  <section class="section" id="included" aria-labelledby="included-title">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">What you get</p>
+        <h2 class="h2" id="included-title">Built to look premium, <em>and to work.</em></h2>
+        <p class="lede">Every site is art-directed and hand-coded, with the features your customers actually use.</p>
+      </div>
+      <div class="caps">
+        <article class="cap" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3l1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9z"/><path d="M18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg></span>
+          <h3>Premium design</h3>
+          <p>Custom type, strong layouts and real art direction. It looks premium because it’s made for you, not picked from a template.</p>
+        </article>
+        <article class="cap" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <h3>Same-day first design</h3>
+          <p>Brief me in the morning and see your site live that day. Every round of changes comes back in hours.</p>
+        </article>
+        <article class="cap" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l8.5 4.7v9L12 21.2l-8.5-4.7v-9z"/><path d="M3.5 7.5L12 12l8.5-4.5M12 12v9.2"/></svg></span>
+          <h3>Any design, any feature</h3>
+          <p>Apple-style scrolling, 3D models, dynamic lighting — whatever the brand calls for.</p>
+        </article>
+        <article class="cap" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h3"/></svg></span>
+          <h3>Bookings, enquiries, sales</h3>
+          <p>Booking calendars, contact forms that land in your inbox, and payment-ready shop pages.</p>
+        </article>
+        <article class="cap" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-14.3 4.9M4 12A8 8 0 0 1 18.3 7.1"/><path d="M18.5 3v4.3h-4.3M5.5 21v-4.3h4.3"/></svg></span>
+          <h3>New build or rebuild</h3>
+          <p>Start from scratch, or from the site you already have — rebuilt properly this time.</p>
+        </article>
+        <article class="cap" data-reveal>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18.5a4.5 4.5 0 0 1-.4-9 6 6 0 0 1 11.5 1.8 3.7 3.7 0 0 1-.6 7.2z"/><path d="M9.5 13.8l1.8 1.8 3.4-3.6"/></svg></span>
+          <h3>Hosting, handled</h3>
+          <p>Fast, secure hosting on Cloudflare, set up for you and handed over for life.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-  <div class="sec-rule" id="sites">The Sites<span class="note">designed, built and shipped end to end &mdash; live on its own domain</span></div>
-  <div class="designs">
-    <div class="design">
-      <span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url">tiatandyrugby.com</span></span>
-      <img class="shot" src="assets/og/site-tiatandyrugby.jpg" alt="The Tia Tandy Rugby homepage" width="1400" height="735" loading="lazy">
-      <span class="meta"><span class="name"><span class="ital">Tia Tandy</span> <span class="display">RUGBY</span></span>
-      <span class="caps">commission &middot; athlete site &middot; built from scratch</span></span>
-      <ul class="feats">
-        <li><b>Made the whole site from scratch</b> &mdash; the design, the words, the code.</li>
-        <li>Her story, achievements and match photos, laid out like a matchday programme.</li>
-        <li>A next-match bar her supporters can check from their phone.</li>
-        <li>Sponsor pages ready to sell &mdash; each partner gets its own shop window.</li>
-      </ul>
-      <a class="visit" href="https://tiatandyrugby.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
+  <!-- ════════ HOW IT'S DONE ════════ -->
+  <section class="section dark" id="how" aria-labelledby="how-title">
+    <div class="wrap agents-grid">
+      <div data-reveal>
+        <p class="eyebrow">How it’s done</p>
+        <h2 class="h2" id="how-title">Studio polish, <em>same-day</em> speed.</h2>
+        <p class="lede">The heavy lifting runs in parallel across a network of AI agents. Then every site is art-directed and finished by hand — so you get the craft of a studio without waiting weeks for it.</p>
+        <ul class="agents-points">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Heavy lifting in parallel, not in a queue</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Art-directed and finished by hand</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Live on a temporary link the same day</li>
+        </ul>
+      </div>
+      <figure class="flow" data-reveal>
+        <figcaption class="visually-hidden">Your one-line brief goes to a network of AI agents working in parallel, then the site is finished by hand and goes live the same day.</figcaption>
+        <span class="node"><span class="k">01</span>Your one-line brief</span>
+        <div class="lanes" aria-hidden="true">
+          <svg viewBox="0 0 300 160" preserveAspectRatio="none">
+            <path class="rail" d="M150 0C150 40 30 30 30 64L30 96C30 130 150 120 150 160"/>
+            <path class="rail" d="M150 0C150 40 90 30 90 64L90 96C90 130 150 120 150 160"/>
+            <path class="rail" d="M150 0L150 160"/>
+            <path class="rail" d="M150 0C150 40 210 30 210 64L210 96C210 130 150 120 150 160"/>
+            <path class="rail" d="M150 0C150 40 270 30 270 64L270 96C270 130 150 120 150 160"/>
+            <path class="pulse" d="M150 0C150 40 30 30 30 64L30 96C30 130 150 120 150 160"/>
+            <path class="pulse" d="M150 0C150 40 90 30 90 64L90 96C90 130 150 120 150 160"/>
+            <path class="pulse" d="M150 0L150 160"/>
+            <path class="pulse" d="M150 0C150 40 210 30 210 64L210 96C210 130 150 120 150 160"/>
+            <path class="pulse" d="M150 0C150 40 270 30 270 64L270 96C270 130 150 120 150 160"/>
+          </svg>
+          <span class="lanes-label">AI agents, in parallel</span>
+        </div>
+        <span class="node hand"><span class="k">02</span>Finished by hand</span>
+        <span class="join" aria-hidden="true"></span>
+        <span class="node live"><i class="live-dot" aria-hidden="true"></i>Live the same day</span>
+      </figure>
     </div>
-    <div class="design">
-      <span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url">jadedrose.co.uk</span></span>
-      <img class="shot" src="assets/og/site-jadedrose.jpg" alt="Jaded Rose" width="1400" height="735" loading="lazy">
-      <span class="meta"><span class="name"><span class="ital">Jaded</span> <span class="display">ROSE</span></span>
-      <span class="caps">commission &middot; e-commerce fashion &middot; custom theme</span></span>
-      <ul class="feats">
-        <li><b>Made their custom theme</b> &mdash; the shop&rsquo;s look and feel, designed to the brand.</li>
-        <li>Their products, checkout and orders carried on untouched underneath.</li>
-        <li>Their own ideas, drawn up and delivered &mdash; briefed in plain English, live in days.</li>
-      </ul>
-      <a class="visit" href="https://jadedrose.co.uk" target="_blank" rel="noopener">Visit the site &rarr;</a>
-    </div>
-    <div class="design">
-      <span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url">visualneuroscience.ai</span></span>
-      <img class="shot" src="assets/og/site-visualneuroscience.jpg" alt="The Visual Neuroscience atlas" width="1400" height="735" loading="lazy">
-      <span class="meta"><span class="name"><span class="ital">Visual</span> <span class="display">NEUROSCIENCE.AI</span></span>
-      <span class="caps">commission &middot; education &middot; brain atlas &middot; built from scratch</span></span>
-      <ul class="feats">
-        <li><b>Made the whole site from scratch</b> &mdash; design, code and hosting.</li>
-        <li>A real 3D brain you can spin, slice and explore &mdash; right in the browser.</li>
-        <li>Nothing to install and nothing to pay &mdash; it works on any laptop.</li>
-        <li>Built for students: every brain region explained as you click it.</li>
-      </ul>
-      <a class="visit" href="https://visualneuroscience.ai" target="_blank" rel="noopener">Visit the site &rarr;</a>
-    </div>
-    <div class="design">
-      <span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url">basilicalabs.ai</span></span>
-      <img class="shot" src="assets/og/site-basilicalabs.jpg" alt="The BasilicaLabs.AI homepage" width="1400" height="735" loading="lazy">
-      <span class="meta"><span class="name"><span class="ital">BasilicaLabs</span> <span class="display">.AI</span></span>
-      <span class="caps">the studio&rsquo;s own site &middot; built from scratch</span></span>
-      <ul class="feats">
-        <li><b>Made the whole site from scratch</b> &mdash; every page, drawing and tool on it.</li>
-        <li>Live 3D building models you can spin and export, in the browser.</li>
-        <li>Sign-in accounts, a newsletter, video players and a stock-research tool.</li>
-        <li>The shop floor and the shop window &mdash; the same craft your site gets.</li>
-      </ul>
-      <a class="visit" href="https://basilicalabs.ai" target="_blank" rel="noopener">Visit the site &rarr;</a>
-    </div>
-  </div>
+  </section>
 
-  <div class="wd-cta" id="start">
-    <span class="wd-big">Want one?</span>
-    <p>Tell me what the business does and whether you&rsquo;re starting from scratch or from a
-      site you already have. The same conversation that built these &mdash; and everything else
-      on this site &mdash; starts here.</p>
-    <a class="wd-go" href="contact.html">Start the conversation</a>
-  </div>
+  <!-- ════════ THE DIFFERENCE ════════ -->
+  <section class="section" id="difference" aria-labelledby="difference-title">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">The difference</p>
+        <h2 class="h2" id="difference-title">See it first. <em>Own it outright.</em></h2>
+        <p class="lede">How a same-day build compares with the usual routes to a new site.</p>
+      </div>
+      <table class="compare" data-reveal>
+        <caption class="visually-hidden">BasilicaLabs Web Design compared with a typical agency and a DIY site builder</caption>
+        <thead>
+          <tr><th scope="col"><span class="visually-hidden">Compared on</span></th><th scope="col" class="us">BasilicaLabs Web Design</th><th scope="col">Typical agency</th><th scope="col">DIY site builder</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">See it before you commit</th><td class="us" data-label="BasilicaLabs">Yes — live on day one</td><td data-label="Agency">Usually after an agreement is signed</td><td data-label="DIY builder">Only once you’ve built it yourself</td></tr>
+          <tr><th scope="row">First version</th><td class="us" data-label="BasilicaLabs">The same day</td><td data-label="Agency">Weeks</td><td data-label="DIY builder">Whenever you finish it</td></tr>
+          <tr><th scope="row">Changes</th><td class="us" data-label="BasilicaLabs">Back in hours</td><td data-label="Agency">Days to weeks</td><td data-label="DIY builder">Your own time</td></tr>
+          <tr><th scope="row">Who owns the site</th><td class="us" data-label="BasilicaLabs">You — every file</td><td data-label="Agency">Depends on the agreement</td><td data-label="DIY builder">It stays on their platform</td></tr>
+          <tr><th scope="row">Lock-in</th><td class="us" data-label="BasilicaLabs">None</td><td data-label="Agency">Often a long agreement</td><td data-label="DIY builder">Tied to the platform</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ════════ OWNERSHIP ════════ -->
+  <section class="section alt" id="ownership" aria-labelledby="ownership-title">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Ownership</p>
+        <h2 class="h2" id="ownership-title">Yours. <em>Every file.</em></h2>
+        <p class="lede">When your site moves to your own domain, it’s yours outright — nothing rented, nothing locked.</p>
+      </div>
+      <div class="own">
+        <article data-reveal><span class="k">01 · The code</span><h3>Every file, yours</h3><p>The whole site belongs to you outright. Keep it, move it, build on it.</p></article>
+        <article data-reveal><span class="k">02 · The hosting</span><h3>Handled for life</h3><p>Fast, secure hosting on Cloudflare, set up and handed over for life.</p></article>
+        <article data-reveal><span class="k">03 · The setup</span><h3>Nothing to learn</h3><p>I set everything up and transfer it to you. You get on with running the business.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ FAQ ════════ -->
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq-grid">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Questions</p>
+        <h2 class="h2" id="faq-title">Good <em>to know.</em></h2>
+        <p class="lede">Anything else? <a href="#start">Ask me directly.</a></p>
+      </div>
+      <div class="faq" data-reveal>
+        <details><summary>How can it be live the same day?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>The heavy lifting runs in parallel across a network of AI agents, and I finish every site by hand. Brief me in the morning and you’ll see your first design live that day.</p></details>
+        <details><summary>What if I don’t love it?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>Then you walk away. You see your site working on a temporary link before you commit to anything, and there’s no lock-in.</p></details>
+        <details><summary>What if I want changes?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>Just say. Changes come back in hours, not weeks. After launch you can add a fortnight of unlimited changes whenever you want one.</p></details>
+        <details><summary>Can you rebuild the site I already have?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>Yes. Send me the link and a line about what you want it to do better, and it gets rebuilt properly.</p></details>
+        <details><summary>Can my site take bookings or sell online?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>Yes: booking calendars, contact forms that land in your inbox, and payment-ready shop pages.</p></details>
+        <details><summary>Who owns the site?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>You do. Every file is yours outright, and I set up the hosting on Cloudflare and hand it all over — nothing to learn.</p></details>
+        <details><summary>Is it built by AI?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>Built with AI, finished by hand. Agents do the heavy lifting in parallel; every site is art-directed and finished by me.</p></details>
+        <details><summary>What do you need from me?<span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>Just one line about what the business does. If you have a site already, send the link, plus any photos or logo you’d like used.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ REFERRALS ════════ -->
+  <section class="section refer" id="referrals" aria-labelledby="refer-title">
+    <div class="wrap refer-grid">
+      <div data-reveal>
+        <p class="eyebrow">Referrals</p>
+        <h2 class="h2" id="refer-title">Send a friend. <em>Get paid.</em></h2>
+        <p class="lede">Pass this site on. When a friend buys a site on your word, you get a cash thank-you — and a bigger one once you’re a customer yourself.</p>
+      </div>
+      <ol data-reveal>
+        <li><span class="n">1</span><b>Pass it on</b>To any business that needs a better site.</li>
+        <li><span class="n">2</span><b>They buy a site</b>Live the same day, no lock-in.</li>
+        <li><span class="n">3</span><b>You get paid</b>A cash thank-you, every time.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ════════ START ════════ -->
+  <section class="section dark start" id="start" aria-labelledby="start-title">
+    <div class="wrap start-grid">
+      <div data-reveal>
+        <p class="eyebrow">Start here</p>
+        <h2 id="start-title">Start with <em>one line.</em></h2>
+        <p class="lede">Tell me what the business does, and whether you’re starting from scratch or from a site you already have. You’ll see your new site live on a temporary link before you commit to anything.</p>
+        <div class="direct">
+          <span>Rather talk it through?</span>
+          <span>Email <a href="mailto:fid_kk@proton.me?subject=Website%20Design">fid_kk@proton.me</a></span>
+          <span>Or message <a href="https://instagram.com/fid_900" target="_blank" rel="noopener">@fid_900</a> on Instagram</span>
+        </div>
+      </div>
+
+      <form class="brief" id="brief" method="post" action="https://formsubmit.co/fid_kk@proton.me" novalidate data-reveal>
+        <input type="hidden" name="_subject" value="Website brief from the site">
+        <input type="hidden" name="_template" value="table">
+        <div class="field">
+          <label for="fBusiness">Your business, in one line</label>
+          <input id="fBusiness" name="business" type="text" placeholder="e.g. Family bakery in Leeds, want online orders" required>
+        </div>
+        <fieldset class="kind">
+          <legend>Starting from</legend>
+          <div class="choices">
+            <label><input type="radio" name="starting_from" value="Scratch" checked><span>Scratch</span></label>
+            <label><input type="radio" name="starting_from" value="A site I already have"><span>A site I already have</span></label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="fSite">Current website <span class="opt">(if you have one)</span></label>
+          <input id="fSite" name="current_site" type="url" inputmode="url" placeholder="yourbusiness.co.uk" autocomplete="url">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="fName">Your name</label>
+            <input id="fName" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="fEmail">Email</label>
+            <input id="fEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="fMore">Anything else <span class="opt">(optional)</span></label>
+          <textarea id="fMore" name="message" rows="3" placeholder="Bookings, a shop, a look you love…"></textarea>
+        </div>
+        <div class="visually-hidden" aria-hidden="true">
+          <label for="fHoney">Leave this empty</label>
+          <input id="fHoney" name="_honey" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="form-foot">
+          <button class="btn btn-ink" type="submit" id="fSend">Get my preview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <p class="form-note">No obligation. You see it live before you commit to anything.</p>
+        </div>
+        <p class="form-status" id="fStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
 
 </main>
 
-<!-- ════════ FOOTER ════════ -->
 <footer class="site-footer">
-  <div class="wrap foot-grid">
-    <div class="foot-brand">
-      <a class="brand" href="./">BasilicaLabs.AI</a>
-      <p class="foot-tag">Websites designed and built by Fadil Karim &mdash; new builds from scratch, or your existing site rebuilt properly. Art-directed, hand-coded, live on your own domain in days.</p>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="./" aria-label="BasilicaLabs Web Design — home"><span class="w">BasilicaLabs</span><span class="d">Web Design</span></a>
+        <p>New websites and rebuilds, designed, built and live the same day. Every file yours.</p>
+      </div>
+      <nav class="foot-col" aria-label="Footer — site">
+        <p class="h">Site</p>
+        <a href="#work">Work</a>
+        <a href="#process">How it works</a>
+        <a href="#included">What you get</a>
+        <a href="#faq">FAQ</a>
+        <a href="#start">Start here</a>
+      </nav>
+      <nav class="foot-col" aria-label="Footer — contact">
+        <p class="h">Get in touch</p>
+        <a href="mailto:fid_kk@proton.me?subject=Website%20Design">fid_kk@proton.me</a>
+        <a href="https://instagram.com/fid_900" target="_blank" rel="noopener">Instagram · @fid_900</a>
+        <a href="https://instagram.com/ottomanlabs.ai" target="_blank" rel="noopener">Instagram · @ottomanlabs.ai</a>
+        <a href="https://uk.linkedin.com/in/fadil-karim" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+      <nav class="foot-col" aria-label="Footer — studio">
+        <p class="h">Studio</p>
+        <a href="https://basilicalabs.ai" target="_blank" rel="noopener">BasilicaLabs.AI</a>
+        <a href="https://github.com/ottomanlabsai" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.youtube.com/@OttomanlabsAI" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://t.me/ottomanlabs.ai" target="_blank" rel="noopener">Telegram</a>
+      </nav>
     </div>
-    <nav class="foot-col" aria-label="Footer — site">
-      <h3>Site</h3>
-      <a href="./">Home</a>
-      <a href="#how">How it works</a>
-      <a href="#build">The build</a>
-      <a href="#price">The price</a>
-      <a href="#sites">The sites</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <nav class="foot-col" aria-label="Footer — studio">
-      <h3>Studio</h3>
-      <a href="https://basilicalabs.ai" target="_blank" rel="noopener">BasilicaLabs.AI</a>
-      <a href="https://github.com/ottomanlabsai" target="_blank" rel="noopener">Open source on GitHub</a>
-      <a href="https://basilicalabs.ai/assets/Fadil-Karim-CV.pdf" target="_blank" rel="noopener">Fadil Karim&rsquo;s CV</a>
-    </nav>
-    <nav class="foot-col" aria-label="Footer — follow">
-      <h3>Follow</h3>
-      <a href="https://www.youtube.com/@OttomanlabsAI" target="_blank" rel="noopener">YouTube</a>
-      <a href="https://uk.linkedin.com/in/fadil-karim" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://instagram.com/ottomanlabs.ai" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://t.me/ottomanlabs.ai" target="_blank" rel="noopener">Telegram</a>
-      <a href="mailto:fid_kk@proton.me">fid_kk@proton.me</a>
-    </nav>
-  </div>
-  <div class="wrap foot-legal">
-    <span>&copy; 2026 BasilicaLabs.AI &middot; Fadil Karim</span>
-    <span>Hand-coded &middot; set in Flux, Newsreader &amp; Prata</span>
+    <div class="legal">
+      <span>© 2026 BasilicaLabs Web Design · Fadil Karim</span>
+      <span>Part of <a href="https://basilicalabs.ai" target="_blank" rel="noopener">BasilicaLabs.AI</a></span>
+    </div>
   </div>
 </footer>
 

@@ -1,8 +1,8 @@
 {
   "name": "basilicalabswebdesign",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
-  "description": "Website Design by BasilicaLabs.AI — the dedicated site for the web design service. Cloudflare Workers static assets, no build step.",
+  "description": "BasilicaLabs Web Design - the sales site for the web design service. Cloudflare Workers static assets, no build step.",
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
