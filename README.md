@@ -23,10 +23,10 @@ public/
     css/site.css          the whole design system
     js/site.js            header state, showcase carousel, scroll reveals,
                           the brief form
-    fonts/                Flux, Instrument Sans, Instrument Serif italic
+    fonts/                Flux, Instrument Sans, Instrument Serif (upright and italic)
     img/work/             portfolio screenshots, WebP at 800 and 1400 wide
-    img/share.jpg         link-preview card, 1200 × 630
-    img/favicon.svg, img/apple-touch-icon.png
+    img/share-v2.1.jpg    link-preview card, 1200 × 630
+    img/favicon-v2.1.svg, img/apple-touch-icon-v2.1.png
 wrangler.jsonc            assets-only config, no Worker script
 package.json              wrangler devDependency + dev/deploy/check scripts
 ```
@@ -52,25 +52,35 @@ Worker's Settings → Domains & Routes.
 
 - **Type.** Flux, the BasilicaLabs.AI brand face, sets the wordmark and every
   heading. It has one weight (500), so nothing is ever set bold in it.
-  Instrument Serif italic sets "Web Design" under the wordmark and one accent
-  phrase per heading. Instrument Sans sets everything else. All three are
+  Instrument Serif sets "Web Design", centred and upright under the wordmark,
+  and in italic one accent phrase per heading. Instrument Sans sets everything
+  else. All three are
   self-hosted; Instrument Sans and Serif are SIL Open Font License.
 - **Colour.** Ink `#111114`, paper `#F6F3EC`, a second paper `#ECE7DC` for
-  alternate bands, and one signal orange: `#FF5B24` for fills and for text on
-  ink, `#C2410C` for orange text on paper. Every text pairing meets WCAG AA.
+  alternate bands, and one emerald accent: `#10B981` for fills, `#2DD4A0` for
+  text on ink, `#036144` for text on paper, with ink text on emerald fills.
+  The accent lives in five tokens at the top of `site.css`, so a recolour is a
+  few-line change. Every text pairing meets WCAG AA.
 - **Motion.** A crossfading showcase of the four sites, gentle floating cards,
   a flowing lane diagram and scroll reveals. All of it stops under
   `prefers-reduced-motion`, and with no script every section is visible.
 
 ## Content rules
 
-- No pricing anywhere on the site: no amounts, quotes, fees, "free" offers or
-  cost comparisons. Prices are discussed one to one.
+- No pricing anywhere on the site: no amounts, quotes, fees or cost
+  comparisons. Prices are discussed one to one. The one exception, at the
+  owner's request: hosting is free on Cloudflare, forever.
 - Client-facing wording follows the owner's the-sell vocabulary: agreement not
   contract, premium not expensive, opportunity not options, investment not
   cost.
 - Every claim comes from the service as the owner describes it. No invented
   testimonials, figures or clients.
+
+## Contact details on the page
+
+Phone +44 7713 563722, email fid_kk@proton.me, and Instagram @BasilicaLabs.AI
+(formerly @ottomanlabs.ai) and @fid_900 — beside the brief form and in the
+footer.
 
 ## External resources
 
@@ -79,7 +89,7 @@ Worker's Settings → Domains & Routes.
   confirmation, the visitor's email app opens with the brief filled in. After
   the domain goes live, send one test brief and click FormSubmit's activation
   link in the inbox.
-- **Share image.** `og:image` points at `public/assets/img/share.jpg` in this
+- **Share image.** `og:image` points at `public/assets/img/share-v2.1.jpg` in this
   repository through jsDelivr's GitHub CDN, because link previews need an
   absolute address and the site has no domain yet.
 - **Links out.** The four portfolio sites, basilicalabs.ai, GitHub, YouTube,
@@ -94,5 +104,5 @@ In the `<head>` of `index.html`:
 <meta property="og:url" content="https://<domain>/">
 ```
 
-Point `og:image` and `twitter:image` at `https://<domain>/assets/img/share.jpg`,
+Point `og:image` and `twitter:image` at `https://<domain>/assets/img/share-v2.1.jpg`,
 and add a `Sitemap:` line to `robots.txt` if a sitemap is added.

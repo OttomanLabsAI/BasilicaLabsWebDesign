@@ -83,27 +83,26 @@
       var email = field('fEmail').value.trim();
       var site = field('fSite').value.trim();
       var more = field('fMore').value.trim();
-      var startingFrom = (form.querySelector('input[name="starting_from"]:checked') || {}).value || '';
 
       var missing = [];
-      if (!business) missing.push('your business');
+      if (!business && !site) missing.push('a line about your business or the link to your site');
       if (!name) missing.push('your name');
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) missing.push('an email address');
       if (missing.length) {
         setStatus('Please add ' + missing.join(', ').replace(/, ([^,]*)$/, ' and $1') + '.', 'err');
-        (!business ? field('fBusiness') : !name ? field('fName') : field('fEmail')).focus();
+        (!business && !site ? field('fBusiness') : !name ? field('fName') : field('fEmail')).focus();
         return;
       }
       // honeypot filled: a bot, so pretend all is well
       if (field('fHoney').value) { setStatus('Thanks — your brief is on its way.', 'ok'); form.reset(); return; }
 
       var data = new FormData(form);
-      data.set('_subject', 'Website brief — ' + name + ': ' + business.slice(0, 60));
+      data.set('_subject', 'Website brief — ' + name + ': ' + (business || site).slice(0, 60));
       data.set('_captcha', 'false');
       data.set('_template', 'table');
 
       var mailFallback = function(reason){
-        var body = 'Business: ' + business + '\nStarting from: ' + startingFrom +
+        var body = (business ? 'Business: ' + business : 'Rebuild my site') +
           (site ? '\nCurrent website: ' + site : '') + (more ? '\n\n' + more : '') +
           '\n\nFrom: ' + name + ' <' + email + '>';
         setStatus(reason + ' Opening your email app with the brief filled in…', 'err');

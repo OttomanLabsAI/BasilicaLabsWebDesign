@@ -49,29 +49,38 @@ batches: implement, verify, commit, push.
 
 ## Copy rules
 
-- **No pricing on the site.** No amounts, quotes, fees, "free" offers or cost
-  comparisons - the owner discusses prices one to one.
+- **No pricing on the site.** No amounts, quotes, fees or cost comparisons -
+  the owner discusses prices one to one. The one exception, at the owner's
+  request: hosting is free on Cloudflare, forever.
 - **The-sell vocabulary** for every word a visitor reads: agreement not
   contract, premium not expensive, opportunity not options, investment not
   cost, short numbers when a number is needed.
 - **Only the owner's claims.** Same-day first design, live on a temporary link;
   changes in hours; ownership only if the client wants it; an optional
-  fortnight of unlimited changes; code, hosting and setup handed over; AI
-  agents in parallel, finished by hand; a cash thank-you for referrals; the
-  four portfolio sites. No invented testimonials, figures or clients.
+  fortnight of unlimited changes; code, hosting and setup handed over; hosting
+  free on Cloudflare, forever; for a rebuild, the link to the existing site is
+  all that's needed; AI agents in parallel, finished by hand; a cash thank-you
+  for referrals; the four portfolio sites. No invented testimonials, figures or
+  clients.
+- **Contact details.** Phone +44 7713 563722, fid_kk@proton.me, Instagram
+  @BasilicaLabs.AI (renamed from @ottomanlabs.ai) and @fid_900.
 
 ## Design system
 
 - **Name and logo.** The site is "BasilicaLabs Web Design". The lockup is
-  "BasilicaLabs" in Flux with "Web Design" underneath in Instrument Serif
-  italic, in orange.
+  "BasilicaLabs" in Flux with "Web Design" centred underneath in Instrument
+  Serif - upright, never italic - in the accent colour.
 - **Type.** Flux (one weight, 500) for the wordmark and headings; never bold it
-  - `font-synthesis:none` is set. Instrument Serif italic for one accent phrase
-  per heading (`<em>` inside `h1`/`h2`). Instrument Sans for everything else.
+  - `font-synthesis:none` is set. Instrument Serif upright for the logo line,
+  and italic for one accent phrase per heading (`<em>` inside `h1`/`h2`).
+  Instrument Sans for everything else.
   All self-hosted from `assets/fonts/`; no third-party font requests.
 - **Colour.** Tokens live in `:root` of `site.css`: ink `#111114`, paper
-  `#F6F3EC`, paper-2 `#ECE7DC`, orange `#FF5B24` for fills and text on ink,
-  `#C2410C` for orange text on paper. Keep every text pairing at WCAG AA.
+  `#F6F3EC`, paper-2 `#ECE7DC`, and the emerald accent in five tokens -
+  `--accent-rgb` (16 185 129, fills and tints), `--accent-hover`,
+  `--accent-bright` `#2DD4A0` (text on ink), `--accent-ink` `#036144` (text on
+  paper) and `--on-accent` (text set on the accent). Never hard-code the
+  accent. Keep every text pairing at WCAG AA. The owner turned down orange.
 - **Motion** stops entirely under `prefers-reduced-motion`, and the page must
   work with no script at all.
 - `404.html` is served at any depth, so every path in it is root-absolute.
@@ -114,3 +123,4 @@ batches: implement, verify, commit, push.
 | --- | --- | --- |
 | v1.0 | Website Design gets a home of its own | The web design service now has its own site, carrying everything from the basilicalabs.ai page — how it works, the build, the price, ownership, referrals and the four sites — in the same black-on-white design with the yellow flyer panels, in light and dark. Enquiries get their own contact page that sends straight to the inbox, and the typefaces load from the site itself, so it looks right everywhere without calling out to Google. |
 | v2.0 | A fresh design built to win new clients | The site is redesigned from the ground up as a sales page for the web design service, under the name BasilicaLabs Web Design and set in Flux, with the promise of a new website, live today, front and centre. Visitors see four recent sites, how a one-line brief becomes a live site the same day, and what they own at the end, then send their brief from a form on the same page. Prices stay off the page, so every conversation about money starts with you. |
+| v2.1 | Emerald replaces orange, and briefs get simpler | The orange gives way to emerald green across the site, and Web Design now sits centred and upright beneath the BasilicaLabs name. Visitors can start with just the link to their current website, the page now promises hosting that's free on Cloudflare forever, and your phone number and the renamed BasilicaLabs.AI Instagram sit beside the brief form and in the footer. |
