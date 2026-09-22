@@ -45,7 +45,8 @@
   --wrap:1240px; --gutter:clamp(16px,4vw,40px);
   --r-sm:10px; --r:16px; --r-lg:24px;
   --shadow:0 1px 2px rgba(17,17,20,.06),0 18px 40px -18px rgba(17,17,20,.28);
-  --header-h:72px; --bar-h:60px;
+  /* the logo scales with the screen, and the header grows to fit it */
+  --logo-size:clamp(1.8rem,.65rem + 5.7vw,2.4rem); --header-h:calc(var(--logo-size) * 1.76 + 22px); --bar-h:60px;
 }
 
 /* ── base ── */
@@ -112,13 +113,16 @@ h1 em,h2 em{font-family:var(--serif);font-style:italic;font-weight:400;font-size
   border-bottom:1px solid transparent;transition:border-color .2s,background-color .2s}
 .site-header.scrolled{background:rgba(17,17,20,.94);border-bottom-color:var(--line-dark)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:var(--header-h)}
-.logo{display:inline-flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;line-height:1;flex:none}
-.logo .w{font:500 1.6rem/1 var(--display);letter-spacing:.004em}
-.logo .d{font:400 1.08rem/1 var(--serif);letter-spacing:.01em;color:var(--accent-bright);margin-top:2px}
+.logo{display:inline-flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;line-height:1;flex:none;
+  font-size:var(--logo-size)}
+.logo .w{font:500 1em/1 var(--display);letter-spacing:.004em}
+.logo .d{font:400 .675em/1 var(--serif);letter-spacing:.01em;color:var(--accent-bright);margin-top:.08em}
 .nav-links{display:flex;align-items:center;gap:clamp(18px,2.4vw,32px);list-style:none;margin:0;padding:0}
 .nav-links a{font-size:.95rem;font-weight:500;color:var(--muted-dark);text-decoration:none;transition:color .15s}
 .nav-links a:hover{color:var(--on-dark)}
-@media (max-width:880px){.nav-links{display:none}}
+.nav > .btn{flex:none;white-space:nowrap}
+@media (max-width:880px){.nav > nav{display:none}}   /* no empty menu taking a gap on phones */
+@media (max-width:374px){.nav{gap:12px}.nav > .btn{padding:.75em .95em;font-size:.88rem}}   /* room for the logo on the smallest phones */
 
 /* ── hero ── */
 .hero{position:relative;overflow:hidden;padding-block:clamp(44px,6.5vw,96px) clamp(40px,5vw,64px);isolation:isolate}

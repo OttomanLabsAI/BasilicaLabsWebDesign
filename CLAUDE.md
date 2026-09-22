@@ -72,6 +72,11 @@ batches: implement, verify, commit, push.
 - **Name and logo.** The site is "BasilicaLabs Web Design". The lockup is
   "BasilicaLabs" in Flux with "Web Design" centred underneath in Instrument
   Serif - upright, never italic - in the accent colour.
+  Its size is one token, `--logo-size`, scaling from 28.8px on the smallest
+  phones to 38.4px from tablets up; "Web Design" is .675 of it, and the
+  header height (`--header-h`) is derived from it. The owner asked for a big
+  logo - do not shrink it. On phones the header holds only the logo and the
+  preview button, which never shrinks or wraps.
 - **Type.** Flux (one weight, 500) for the wordmark and headings; never bold it
   - `font-synthesis:none` is set. Instrument Serif upright for the logo line,
   and italic for one accent phrase per heading (`<em>` inside `h1`/`h2`).
@@ -96,8 +101,8 @@ batches: implement, verify, commit, push.
   joins the values of overlapping rules. Fonts and images are cached as
   immutable, so a changed font or image needs a new file name.
 - **Social images.** The link-preview thumbnail
-  (`assets/img/social-thumbnail-v2.3.jpg`, 1200 × 630) and a square post
-  (`assets/img/social-square-v2.3.jpg`, 1080 × 1080) are rendered from
+  (`assets/img/social-thumbnail-v2.4.jpg`, 1200 × 630) and a square post
+  (`assets/img/social-square-v2.4.jpg`, 1080 × 1080) are rendered from
   `social/thumbnail.html` and `social/square.html` with the site's own fonts.
   Keep the thumbnail's logo, headline and chips inside the centre 600 px so a
   square crop (WhatsApp) still shows them, and check it at small sizes. A
@@ -141,3 +146,4 @@ batches: implement, verify, commit, push.
 | v2.1 | Emerald replaces orange, and briefs get simpler | The orange gives way to emerald green across the site, and Web Design now sits centred and upright beneath the BasilicaLabs name. Visitors can start with just the link to their current website, the page now promises hosting that's free on Cloudflare forever, and your phone number and the renamed BasilicaLabs.AI Instagram sit beside the brief form and in the footer. |
 | v2.2 | Contact details stay on screen everywhere | A slim contact bar now stays fixed along the bottom of every page, so a visitor can call, email or message you on Instagram at any moment without scrolling to the footer. On phones it becomes three large buttons, one tap from a call, an email or your Instagram. |
 | v2.3 | A sharper thumbnail for every shared link | Links to the site now open with a purpose-made thumbnail: the BasilicaLabs Web Design name, the promise of a new website live today, and two of your recent sites angled in from the edges, laid out so it still reads when WhatsApp crops it to a square. A matching square version is ready to post on Instagram. |
+| v2.4 | A bigger logo everywhere it appears | The BasilicaLabs Web Design logo is now about half as big again in the header, footer and 404 page, scaling down neatly on phones, and it stands larger on the link thumbnail and the square Instagram post too. On the smallest phones the preview button also stays on one line beside it. |
