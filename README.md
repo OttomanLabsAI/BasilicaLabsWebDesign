@@ -27,8 +27,10 @@ public/
                           the brief form
     fonts/                Flux, Instrument Sans, Instrument Serif (upright and italic)
     img/work/             portfolio screenshots, WebP at 800 and 1400 wide
-    img/share-v2.1.jpg    link-preview card, 1200 × 630
+    img/social-thumbnail-v2.3.jpg   link-preview thumbnail, 1200 × 630
+    img/social-square-v2.3.jpg      square post for Instagram, 1080 × 1080
     img/favicon-v2.1.svg, img/apple-touch-icon-v2.1.png
+social/                   sources for the social images (not served)
 wrangler.jsonc            assets-only config, no Worker script
 package.json              wrangler devDependency + dev/deploy/check scripts
 ```
@@ -85,6 +87,28 @@ Phone +44 7713 563722, email fid_kk@proton.me, and Instagram @BasilicaLabs.AI
 footer. Call, email and @BasilicaLabs.AI also sit in the contact bar fixed to
 the bottom of every page.
 
+## Social images
+
+- **Link-preview thumbnail** (`public/assets/img/social-thumbnail-v2.3.jpg`,
+  1200 × 630) — what social sites and messaging apps show when the link is
+  shared. The name, the logo and the promise sit in the centre 600 px, so apps
+  that crop previews to a square, such as WhatsApp, still show them.
+- **Square post** (`public/assets/img/social-square-v2.3.jpg`, 1080 × 1080) —
+  for Instagram and other feeds.
+
+Both are rendered from the HTML in `social/`, which uses the site's own fonts
+and screenshots. To change one, edit the HTML, serve the repository root so the
+fonts load, and screenshot at the exact size — for example:
+
+```bash
+python3 -m http.server 8000
+npx playwright screenshot --viewport-size="1200, 630" \
+  http://localhost:8000/social/thumbnail.html thumbnail.png
+```
+
+Save the result under a new file name (the images are cached as immutable) and
+point `og:image` and `twitter:image` at it.
+
 ## External resources
 
 - **Brief form.** Posts to `https://formsubmit.co/ajax/fid_kk@proton.me`. If the
@@ -92,7 +116,7 @@ the bottom of every page.
   confirmation, the visitor's email app opens with the brief filled in. After
   the domain goes live, send one test brief and click FormSubmit's activation
   link in the inbox.
-- **Share image.** `og:image` points at `public/assets/img/share-v2.1.jpg` in this
+- **Share image.** `og:image` points at `public/assets/img/social-thumbnail-v2.3.jpg` in this
   repository through jsDelivr's GitHub CDN, because link previews need an
   absolute address and the site has no domain yet.
 - **Links out.** The four portfolio sites, basilicalabs.ai, GitHub, YouTube,
@@ -107,5 +131,5 @@ In the `<head>` of `index.html`:
 <meta property="og:url" content="https://<domain>/">
 ```
 
-Point `og:image` and `twitter:image` at `https://<domain>/assets/img/share-v2.1.jpg`,
+Point `og:image` and `twitter:image` at `https://<domain>/assets/img/social-thumbnail-v2.3.jpg`,
 and add a `Sitemap:` line to `robots.txt` if a sitemap is added.

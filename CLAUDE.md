@@ -20,6 +20,7 @@ public/            everything served
   _headers         security + caching headers
   _redirects       v1's /contact paths → /#start
   robots.txt
+social/            HTML sources for the social images - not served
 wrangler.jsonc     assets-only config, no Worker script
 package.json       wrangler devDependency + dev/deploy/check scripts
 ```
@@ -94,8 +95,15 @@ batches: implement, verify, commit, push.
 - In `_headers`, give each path exactly one `Cache-Control` rule: Cloudflare
   joins the values of overlapping rules. Fonts and images are cached as
   immutable, so a changed font or image needs a new file name.
-- The share image is referenced through jsDelivr's GitHub CDN until the site
-  has a domain; then point `og:image` at the domain and add `canonical` and
+- **Social images.** The link-preview thumbnail
+  (`assets/img/social-thumbnail-v2.3.jpg`, 1200 × 630) and a square post
+  (`assets/img/social-square-v2.3.jpg`, 1080 × 1080) are rendered from
+  `social/thumbnail.html` and `social/square.html` with the site's own fonts.
+  Keep the thumbnail's logo, headline and chips inside the centre 600 px so a
+  square crop (WhatsApp) still shows them, and check it at small sizes. A
+  changed image gets a new file name.
+- The thumbnail is referenced through jsDelivr's GitHub CDN until the site has
+  a domain; then point `og:image` at the domain and add `canonical` and
   `og:url`.
 
 ## Git and release workflow
@@ -132,3 +140,4 @@ batches: implement, verify, commit, push.
 | v2.0 | A fresh design built to win new clients | The site is redesigned from the ground up as a sales page for the web design service, under the name BasilicaLabs Web Design and set in Flux, with the promise of a new website, live today, front and centre. Visitors see four recent sites, how a one-line brief becomes a live site the same day, and what they own at the end, then send their brief from a form on the same page. Prices stay off the page, so every conversation about money starts with you. |
 | v2.1 | Emerald replaces orange, and briefs get simpler | The orange gives way to emerald green across the site, and Web Design now sits centred and upright beneath the BasilicaLabs name. Visitors can start with just the link to their current website, the page now promises hosting that's free on Cloudflare forever, and your phone number and the renamed BasilicaLabs.AI Instagram sit beside the brief form and in the footer. |
 | v2.2 | Contact details stay on screen everywhere | A slim contact bar now stays fixed along the bottom of every page, so a visitor can call, email or message you on Instagram at any moment without scrolling to the footer. On phones it becomes three large buttons, one tap from a call, an email or your Instagram. |
+| v2.3 | A sharper thumbnail for every shared link | Links to the site now open with a purpose-made thumbnail: the BasilicaLabs Web Design name, the promise of a new website live today, and two of your recent sites angled in from the edges, laid out so it still reads when WhatsApp crops it to a square. A matching square version is ready to post on Instagram. |

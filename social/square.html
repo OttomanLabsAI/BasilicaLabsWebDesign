@@ -1,0 +1,36 @@
+<!doctype html>
+<!-- A square post for Instagram and other feeds, 1080 × 1080.
+     Render: open at exactly 1080 × 1080 and screenshot, or see the README. -->
+<html lang="en-GB"><head><meta charset="utf-8"><title>Social square · 1080 × 1080</title><style>
+@font-face{font-family:'Flux';src:url('../public/assets/fonts/flux.woff2') format('woff2');font-weight:500}
+@font-face{font-family:'Instrument Sans';src:url('../public/assets/fonts/instrument-sans-latin.woff2') format('woff2');font-weight:400 700}
+@font-face{font-family:'Instrument Serif';src:url('../public/assets/fonts/instrument-serif-latin.woff2') format('woff2')}
+:root{--ink:#111114;--ink-2:#1A1B20;--paper:#F6F3EC;--bright:#2DD4A0;--line:rgba(246,243,236,.14)}
+*{margin:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{position:relative;background:var(--ink);color:var(--paper);font-family:'Instrument Sans',sans-serif;font-synthesis:none}
+.grid{position:absolute;inset:0;opacity:.6;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:60px 60px;background-position:-30px -30px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 15%,transparent 78%)}
+.glow{position:absolute;width:1100px;height:1100px;left:-10px;top:-560px;background:radial-gradient(circle,rgba(16,185,129,.36),rgba(16,185,129,0) 60%)}
+.top{position:absolute;left:0;right:0;top:92px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.logo{display:inline-flex;flex-direction:column;align-items:center;line-height:1}
+.logo .w{font:500 50px/1 'Flux'}
+.logo .d{font:400 33px/1 'Instrument Serif';letter-spacing:.01em;color:var(--bright);margin-top:4px}
+h1{font:500 104px/.96 'Flux';letter-spacing:-.022em;margin-top:52px}
+h1 span{color:var(--bright);white-space:nowrap}
+.chips{display:flex;gap:10px;margin-top:40px}
+.chips b{font:500 20px/1 'Instrument Sans';border:1px solid rgba(246,243,236,.26);background:rgba(17,17,20,.7);border-radius:99px;padding:12px 17px;white-space:nowrap}
+.frame{position:absolute;left:110px;right:110px;top:742px;border-radius:18px;overflow:hidden;background:var(--ink-2);border:1px solid var(--line);box-shadow:0 -20px 80px -30px rgba(16,185,129,.35)}
+.frame .bar{display:flex;align-items:center;gap:8px;padding:13px 15px;border-bottom:1px solid var(--line)}
+.frame .bar i{width:11px;height:11px;border-radius:50%;background:#2B2C33}
+.frame .bar span{margin-left:8px;font:500 15px/1 ui-monospace,Menlo,monospace;color:#A9ABB2;background:rgba(255,255,255,.06);border-radius:99px;padding:7px 12px}
+.frame img{display:block;width:100%}
+</style></head><body>
+<div class="grid"></div><div class="glow"></div>
+<div class="top">
+  <div class="logo"><span class="w">BasilicaLabs</span><span class="d">Web Design</span></div>
+  <h1>Your new<br>website,<br><span>live today.</span></h1>
+  <div class="chips"><b>Live the same day</b><b>Try before you buy</b><b>Free hosting, forever</b></div>
+</div>
+<div class="frame"><div class="bar"><i></i><i></i><i></i><span>https://tiatandyrugby.com</span></div><img src="../public/assets/img/work/tia-tandy-1400.webp" alt=""></div>
+</body></html>
