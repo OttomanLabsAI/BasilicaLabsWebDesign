@@ -13,8 +13,9 @@ Workers Builds, so **every push to `main` deploys to production**.
 
 ```
 public/            everything served
-  index.html       the sales page, including the brief form
-  404.html         themed not-found page
+  index.html       the sales page, including the brief form and the fixed
+                   contact bar
+  404.html         themed not-found page, with the same contact bar
   assets/          css/site.css, js/site.js, fonts/, img/
   _headers         security + caching headers
   _redirects       v1's /contact paths → /#start
@@ -81,6 +82,12 @@ batches: implement, verify, commit, push.
   `--accent-bright` `#2DD4A0` (text on ink), `--accent-ink` `#036144` (text on
   paper) and `--on-accent` (text set on the accent). Never hard-code the
   accent. Keep every text pairing at WCAG AA. The owner turned down orange.
+- **Contact bar.** A slim bar fixed to the bottom of every page keeps the
+  contact options on show at all times: call, email and Instagram
+  @BasilicaLabs.AI, spelled out on desktop and as three full-height tap
+  targets on phones. `body` carries `padding-bottom: var(--bar-h)` so the bar
+  never covers the footer, and `scroll-padding-bottom` keeps focused fields
+  clear of it. Keep it on every page, the 404 included.
 - **Motion** stops entirely under `prefers-reduced-motion`, and the page must
   work with no script at all.
 - `404.html` is served at any depth, so every path in it is root-absolute.
@@ -124,3 +131,4 @@ batches: implement, verify, commit, push.
 | v1.0 | Website Design gets a home of its own | The web design service now has its own site, carrying everything from the basilicalabs.ai page — how it works, the build, the price, ownership, referrals and the four sites — in the same black-on-white design with the yellow flyer panels, in light and dark. Enquiries get their own contact page that sends straight to the inbox, and the typefaces load from the site itself, so it looks right everywhere without calling out to Google. |
 | v2.0 | A fresh design built to win new clients | The site is redesigned from the ground up as a sales page for the web design service, under the name BasilicaLabs Web Design and set in Flux, with the promise of a new website, live today, front and centre. Visitors see four recent sites, how a one-line brief becomes a live site the same day, and what they own at the end, then send their brief from a form on the same page. Prices stay off the page, so every conversation about money starts with you. |
 | v2.1 | Emerald replaces orange, and briefs get simpler | The orange gives way to emerald green across the site, and Web Design now sits centred and upright beneath the BasilicaLabs name. Visitors can start with just the link to their current website, the page now promises hosting that's free on Cloudflare forever, and your phone number and the renamed BasilicaLabs.AI Instagram sit beside the brief form and in the footer. |
+| v2.2 | Contact details stay on screen everywhere | A slim contact bar now stays fixed along the bottom of every page, so a visitor can call, email or message you on Instagram at any moment without scrolling to the footer. On phones it becomes three large buttons, one tap from a call, an email or your Instagram. |

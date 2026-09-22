@@ -15,6 +15,8 @@ public/
                           how it's done, comparison, ownership, FAQ,
                           referrals, and the brief form
   404.html                themed not-found page (root-absolute paths)
+                          both pages end with the fixed contact bar:
+                          call, email and Instagram, always on screen
   favicon.ico
   robots.txt
   _headers                security + caching headers
@@ -80,7 +82,8 @@ Worker's Settings → Domains & Routes.
 
 Phone +44 7713 563722, email fid_kk@proton.me, and Instagram @BasilicaLabs.AI
 (formerly @ottomanlabs.ai) and @fid_900 — beside the brief form and in the
-footer.
+footer. Call, email and @BasilicaLabs.AI also sit in the contact bar fixed to
+the bottom of every page.
 
 ## External resources
 
