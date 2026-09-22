@@ -1,0 +1,7 @@
+node_modules/
+.wrangler/
+.render-check/
+.verify/
+.dev.vars
+.DS_Store
+*.log

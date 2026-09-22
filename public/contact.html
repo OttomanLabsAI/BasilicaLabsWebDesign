@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<title>Contact — Website Design — BasilicaLabs.AI</title>
+<meta name="description" content="Start the conversation about a new website or a rebuild — tell me what the business does, send a message or email directly. Quoted up front, try before you buy.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BasilicaLabs.AI">
+<meta property="og:title" content="Contact — Website Design — BasilicaLabs.AI">
+<meta property="og:description" content="New builds from scratch, or your existing site rebuilt properly. Hand-coded, art-directed, live on your own domain in days.">
+<meta property="og:image" content="https://basilicalabs.ai/assets/og/og-website-design.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://basilicalabs.ai/assets/og/og-website-design.png">
+<link rel="preload" href="assets/fonts/Flux-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/newsreader-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/prata-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/js/site.js" defer></script>
+<link rel="stylesheet" href="assets/css/contact.css">
+<script src="assets/js/theme-preload.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead wrap">
+  <a class="brand" href="./" aria-label="BasilicaLabs.AI Website Design — home">BasilicaLabs.AI<svg class="sparks" viewBox="0 0 100 100" aria-hidden="true" fill="currentColor"><path transform="translate(52 0) scale(0.30)" d="M50 0C54 32 68 46 100 50 68 54 54 68 50 100 46 68 32 54 0 50 32 46 46 32 50 0Z"/><path transform="translate(0 22) scale(0.60)" d="M50 0C54 32 68 46 100 50 68 54 54 68 50 100 46 68 32 54 0 50 32 46 46 32 50 0Z"/><path transform="translate(60 56) scale(0.40)" d="M50 0C54 32 68 46 100 50 68 54 54 68 50 100 46 68 32 54 0 50 32 46 46 32 50 0Z"/></svg></a>
+  <nav class="nav-row" aria-label="Sections">
+    <a href="./">Home</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+    <a class="ig-link" href="https://instagram.com/fid_900" target="_blank" rel="noopener" aria-label="Instagram — fid_900"><svg class="ig-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.6"/><circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/></svg>fid_900</a>
+    <a class="ig-link" href="https://instagram.com/ottomanlabs.ai" target="_blank" rel="noopener" aria-label="Instagram — ottomanlabs.ai"><svg class="ig-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.6"/><circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/></svg>ottomanlabs.ai</a>
+    <button class="theme-toggle" id="themeToggle" aria-pressed="false" title="Toggle light / dark"><span class="th-dot" aria-hidden="true"></span><span id="themeLabel">Dark</span></button>
+  </nav>
+</header>
+
+<main id="main" class="wrap">
+
+  <div class="box intro">
+    <h1 class="caps">Contact</h1>
+    <p class="lede" style="font-family:var(--font-serif);font-style:italic;font-size:1.1rem;color:var(--ink-60);margin:.4rem 0 0">
+      Tell me what the business does and whether you&rsquo;re starting from scratch or from a site you already have &mdash; send a message below, or email directly.
+    </p>
+  </div>
+
+  <div class="contact-grid">
+
+    <!-- ░░ FORM ░░ -->
+    <section class="card">
+      <h2>Send a message</h2>
+      <p class="sub">Quoted up front &middot; Try before you buy</p>
+
+      <form id="contactForm" novalidate>
+        <div class="field">
+          <label for="cName">Name</label>
+          <input type="text" id="cName" name="name" placeholder="Your name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="cEmail">Email</label>
+          <input type="email" id="cEmail" name="email" placeholder="you@example.com" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="cSubject">Subject</label>
+          <input type="text" id="cSubject" name="subject" placeholder="A new site, or a rebuild?">
+        </div>
+        <div class="field">
+          <label for="cMessage">Message</label>
+          <textarea id="cMessage" name="message" placeholder="A line about your business or your current site…" required></textarea>
+        </div>
+
+        <!-- honeypot: bots fill this, people never see it -->
+        <div class="hp" aria-hidden="true">
+          <label for="cWebsite">Leave this empty</label>
+          <input type="text" id="cWebsite" name="_honey" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="form-row">
+          <button type="submit" class="btn-send" id="sendBtn">Send message</button>
+          <span class="form-status" id="formStatus" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+
+    <!-- ░░ DIRECT EMAIL ░░ -->
+    <aside class="card side">
+      <h2>Rather email?</h2>
+      <p class="sub">Straight to the inbox</p>
+      <p>Prefer your own mail app? Open a pre-addressed email and write at your leisure.</p>
+
+      <a class="btn-mail" href="mailto:fid_kk@proton.me?subject=Website%20Design" id="mailBtn">&#9993;&nbsp; Open email</a>
+
+      <span class="mail-addr"><a href="mailto:fid_kk@proton.me?subject=Website%20Design">fid_kk@proton.me</a></span>
+
+      <div class="elsewhere">
+        <span class="caps">Elsewhere</span>
+        <a href="https://basilicalabs.ai" target="_blank" rel="noopener">BasilicaLabs.AI &#8599;</a>
+        <a href="https://github.com/ottomanlabsai" target="_blank" rel="noopener">GitHub &#8599;</a>
+        <a href="https://www.youtube.com/@OttomanlabsAI" target="_blank" rel="noopener">YouTube &#8599;</a>
+        <a href="https://t.me/ottomanlabs.ai" target="_blank" rel="noopener">Telegram &#8599;</a>
+        <a href="https://instagram.com/ottomanlabs.ai" target="_blank" rel="noopener">Instagram &#8599;</a>
+      </div>
+    </aside>
+
+  </div>
+
+</main>
+
+<!-- ════════ FOOTER ════════ -->
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="brand" href="./">BasilicaLabs.AI</a>
+      <p class="foot-tag">Websites designed and built by Fadil Karim &mdash; new builds from scratch, or your existing site rebuilt properly. Art-directed, hand-coded, live on your own domain in days.</p>
+    </div>
+    <nav class="foot-col" aria-label="Footer — site">
+      <h3>Site</h3>
+      <a href="./">Home</a>
+      <a href="./#how">How it works</a>
+      <a href="./#build">The build</a>
+      <a href="./#price">The price</a>
+      <a href="./#sites">The sites</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <nav class="foot-col" aria-label="Footer — studio">
+      <h3>Studio</h3>
+      <a href="https://basilicalabs.ai" target="_blank" rel="noopener">BasilicaLabs.AI</a>
+      <a href="https://github.com/ottomanlabsai" target="_blank" rel="noopener">Open source on GitHub</a>
+      <a href="https://basilicalabs.ai/assets/Fadil-Karim-CV.pdf" target="_blank" rel="noopener">Fadil Karim&rsquo;s CV</a>
+    </nav>
+    <nav class="foot-col" aria-label="Footer — follow">
+      <h3>Follow</h3>
+      <a href="https://www.youtube.com/@OttomanlabsAI" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://uk.linkedin.com/in/fadil-karim" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://instagram.com/ottomanlabs.ai" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://t.me/ottomanlabs.ai" target="_blank" rel="noopener">Telegram</a>
+      <a href="mailto:fid_kk@proton.me">fid_kk@proton.me</a>
+    </nav>
+  </div>
+  <div class="wrap foot-legal">
+    <span>&copy; 2026 BasilicaLabs.AI &middot; Fadil Karim</span>
+    <span>Hand-coded &middot; set in Flux, Newsreader &amp; Prata</span>
+  </div>
+</footer>
+
+<script src="assets/js/contact.js"></script>
+</body>
+</html>

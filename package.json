@@ -1,0 +1,14 @@
+{
+  "name": "basilicalabswebdesign",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website Design by BasilicaLabs.AI — the dedicated site for the web design service. Cloudflare Workers static assets, no build step.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
