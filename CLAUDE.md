@@ -21,6 +21,7 @@ public/            everything served
   _redirects       v1's /contact paths → /#start
   robots.txt
 social/            HTML sources for the social images - not served
+brand/             the square logo (SVG, PNG) and make_logo.py - not served
 wrangler.jsonc     assets-only config, no Worker script
 package.json       wrangler devDependency + dev/deploy/check scripts
 ```
@@ -110,6 +111,14 @@ batches: implement, verify, commit, push.
 - The thumbnail is referenced through jsDelivr's GitHub CDN until the site has
   a domain; then point `og:image` at the domain and add `canonical` and
   `og:url`.
+- **Square logo.** `brand/logo-square.svg` and `.png` (1080 × 1080) are the
+  owner's chosen layout: basilicalabs.ai's square logo (the three sparkle stars
+  stacked over the wordmark, at the proportions measured from the original),
+  with the stars in the accent, "BasilicaLabs" in paper, "Web Design" in
+  accent-bright centred underneath, on ink. `brand/make_logo.py` draws the SVG
+  from the site's fonts with the lettering outlined; change the script and
+  redraw, then re-export the PNG, rather than editing either file by hand. Keep
+  all the ink inside the inscribed circle so a round crop shows it whole.
 
 ## Git and release workflow
 
@@ -147,3 +156,4 @@ batches: implement, verify, commit, push.
 | v2.2 | Contact details stay on screen everywhere | A slim contact bar now stays fixed along the bottom of every page, so a visitor can call, email or message you on Instagram at any moment without scrolling to the footer. On phones it becomes three large buttons, one tap from a call, an email or your Instagram. |
 | v2.3 | A sharper thumbnail for every shared link | Links to the site now open with a purpose-made thumbnail: the BasilicaLabs Web Design name, the promise of a new website live today, and two of your recent sites angled in from the edges, laid out so it still reads when WhatsApp crops it to a square. A matching square version is ready to post on Instagram. |
 | v2.4 | A bigger logo everywhere it appears | The BasilicaLabs Web Design logo is now about half as big again in the header, footer and 404 page, scaling down neatly on phones, and it stands larger on the link thumbnail and the square Instagram post too. On the smallest phones the preview button also stays on one line beside it. |
+| v2.5 | A square logo with the BasilicaLabs stars | The brand now has a square logo built like the basilicalabs.ai one: the three stars in emerald above BasilicaLabs in white, with Web Design underneath, on black. It fits neatly inside a round crop for an Instagram profile picture, and comes as a ready-to-post image and as a file that stays sharp at any size. |

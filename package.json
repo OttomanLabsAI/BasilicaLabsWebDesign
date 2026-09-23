@@ -1,6 +1,6 @@
 {
   "name": "basilicalabswebdesign",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "private": true,
   "description": "BasilicaLabs Web Design - the sales site for the web design service. Cloudflare Workers static assets, no build step.",
   "scripts": {

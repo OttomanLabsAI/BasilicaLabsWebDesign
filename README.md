@@ -31,6 +31,8 @@ public/
     img/social-square-v2.4.jpg      square post for Instagram, 1080 × 1080
     img/favicon-v2.1.svg, img/apple-touch-icon-v2.1.png
 social/                   sources for the social images (not served)
+brand/                    the square logo as SVG and PNG, and the script
+                          that draws it (not served)
 wrangler.jsonc            assets-only config, no Worker script
 package.json              wrangler devDependency + dev/deploy/check scripts
 ```
@@ -108,6 +110,27 @@ npx playwright screenshot --viewport-size="1200, 630" \
 
 Save the result under a new file name (the images are cached as immutable) and
 point `og:image` and `twitter:image` at it.
+
+## Square logo
+
+`brand/logo-square.svg` and `brand/logo-square.png` (1080 × 1080) are the logo
+for profile pictures and anywhere else a square mark is needed. The layout is
+the basilicalabs.ai square logo's, at its proportions: the three sparkle stars
+in emerald over "BasilicaLabs" in white, with "Web Design" centred underneath
+in Instrument Serif, on the site's near-black. Everything sits within three
+quarters of the circle's radius, so a round crop keeps the whole logo.
+
+The SVG's lettering is converted to outlines, so it looks the same on any
+computer without the fonts installed. `brand/make_logo.py` draws it from the
+site's own fonts; to change the logo, edit the script, then redraw the SVG and
+export the PNG from it:
+
+```bash
+pip install uharfbuzz fonttools brotli
+python3 brand/make_logo.py brand/logo-square.svg
+npx playwright screenshot --viewport-size="1080, 1080" \
+  "file://$PWD/brand/logo-square.svg" brand/logo-square.png
+```
 
 ## External resources
 
