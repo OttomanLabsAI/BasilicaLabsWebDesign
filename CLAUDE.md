@@ -63,8 +63,10 @@ batches: implement, verify, commit, push.
   fortnight of unlimited changes; code, hosting and setup handed over; hosting
   free on Cloudflare, forever; for a rebuild, the link to the existing site is
   all that's needed; AI agents in parallel, finished by hand; a cash thank-you
-  for referrals; the four portfolio sites. No invented testimonials, figures or
-  clients.
+  for referrals; the five portfolio sites. The Dynamic Connectome Lab site is a
+  live preview made for the lab, not a commissioned build: keep it labelled as
+  a preview and never present the lab as a client. No invented testimonials,
+  figures or clients.
 - **Contact details.** Phone +44 7713 563722, fid_kk@proton.me, Instagram
   @BasilicaLabs.AI (renamed from @ottomanlabs.ai) and @fid_900.
 
@@ -157,3 +159,4 @@ batches: implement, verify, commit, push.
 | v2.3 | A sharper thumbnail for every shared link | Links to the site now open with a purpose-made thumbnail: the BasilicaLabs Web Design name, the promise of a new website live today, and two of your recent sites angled in from the edges, laid out so it still reads when WhatsApp crops it to a square. A matching square version is ready to post on Instagram. |
 | v2.4 | A bigger logo everywhere it appears | The BasilicaLabs Web Design logo is now about half as big again in the header, footer and 404 page, scaling down neatly on phones, and it stands larger on the link thumbnail and the square Instagram post too. On the smallest phones the preview button also stays on one line beside it. |
 | v2.5 | A square logo with the BasilicaLabs stars | The brand now has a square logo built like the basilicalabs.ai one: the three stars in emerald above BasilicaLabs in white, with Web Design underneath, on black. It fits neatly inside a round crop for an Instagram profile picture, and comes as a ready-to-post image and as a file that stays sharp at any size. |
+| v2.6 | The Dynamic Connectome Lab joins the recent work | The live preview you made for the Dynamic Connectome Lab now leads your recent work in a card of its own, and it takes its turn in the showcase at the top of the page and among the recent builds. The card presents it as what it is, a preview rebuilt from the lab's Google Site, and calls out the brain's wiring drawing itself, the research figures you can play with and the searchable publications. |

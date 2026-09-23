@@ -67,7 +67,7 @@ Worker's Settings → Domains & Routes.
   text on ink, `#036144` for text on paper, with ink text on emerald fills.
   The accent lives in five tokens at the top of `site.css`, so a recolour is a
   few-line change. Every text pairing meets WCAG AA.
-- **Motion.** A crossfading showcase of the four sites, gentle floating cards,
+- **Motion.** A crossfading showcase of the five sites, gentle floating cards,
   a flowing lane diagram and scroll reveals. All of it stops under
   `prefers-reduced-motion`, and with no script every section is visible.
 
@@ -142,8 +142,18 @@ npx playwright screenshot --viewport-size="1080, 1080" \
 - **Share image.** `og:image` points at `public/assets/img/social-thumbnail-v2.4.jpg` in this
   repository through jsDelivr's GitHub CDN, because link previews need an
   absolute address and the site has no domain yet.
-- **Links out.** The four portfolio sites, basilicalabs.ai, GitHub, YouTube,
+- **Links out.** The five portfolio sites, basilicalabs.ai, GitHub, YouTube,
   LinkedIn, Instagram and Telegram.
+
+## Recent work
+
+Five sites, each shown in the hero's crossfading showcase, as a link in the
+"Recent builds" strip under it, and as a card under Recent work. The newest,
+the Dynamic Connectome Lab, leads the cards across both columns. It is a live
+preview made for the lab from its Google Site, not a commissioned build, and
+its card says so. To add a site, screenshot its homepage at 1400 × 735, save
+it as WebP at 1400 and 800 wide in `assets/img/work/`, and add it in all three
+places; the showcase script picks up any number of slides.
 
 ## When the domain is chosen
 
