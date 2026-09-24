@@ -1,10 +1,10 @@
-"""Draw the square FKarim Web Design logo as a self-contained SVG.
+"""Draw the square Built by Fid logo as a self-contained SVG.
 
 The composition is basilicalabs.ai's square logo (assets/brand/logo-square-*.png
 in that site's repository): the three sparkle stars stacked over the wordmark,
-at the same proportions. Here the stars are emerald, "FKarim" is white on
-ink, and "Web Design" sits centred underneath in Instrument Serif, as it does
-in the site's header. The lettering is shaped with HarfBuzz and converted to
+at the same proportions. Here the stars are emerald, the name is white on
+ink, and the line under it sits centred in Instrument Serif, as it does in the
+site's header. The lettering is shaped with HarfBuzz and converted to
 outlines, so the file needs no fonts.
 
     pip install uharfbuzz fonttools brotli
@@ -20,6 +20,7 @@ from fontTools.pens.boundsPen import BoundsPen
 
 FONTS = Path(__file__).resolve().parent.parent / 'public' / 'assets' / 'fonts'
 CANVAS = 1080                                   # Instagram's full-size square
+WORDMARK, LINE = 'Built by Fid', 'Design Studio'   # the site's logo lockup, name over line
 COLOURS = dict(ground='#111114', name='#F6F3EC', line='#2DD4A0', stars='#10B981')   # ink, paper, accent-bright, accent
 # the sparkle cluster from basilicalabs.ai (assets/site-header.js): one star, three placements in a 100 x 96 box
 STAR = 'M50 0C54 32 68 46 100 50 68 54 54 68 50 100 46 68 32 54 0 50 32 46 46 32 50 0Z'
@@ -67,11 +68,11 @@ def line_top_to_baseline(font_pair, size):
 
 def build(canvas=CANVAS, colours=COLOURS):
     flux, serif = load('flux.woff2'), load('instrument-serif-latin.woff2')
-    S = NAME * canvas; D = .675 * S                  # the site's lockup: "Web Design" at .675 of the name
+    S = NAME * canvas; D = .675 * S                  # the site's lockup: the line at .675 of the name
     B = CLUSTER * canvas; H = .96 * B                # the cluster's ink fills its 100 x 96 box
-    name = run(flux, 'FKarim', .004); line = run(serif, 'Web Design', .01)
+    name = run(flux, WORDMARK, .004); line = run(serif, LINE, .01)
     _, bw = draw(flux, name, S, 0, 0); _, bd = draw(serif, line, D, 0, 0)    # ink boxes at the origin
-    # stacked as in the site's CSS: the two line boxes .08em (of "Web Design") apart
+    # stacked as in the site's CSS: the two line boxes .08em (of the line) apart
     step = S - line_top_to_baseline(flux, S) + .08 * D + line_top_to_baseline(serif, D)
     height = H + GAP * canvas - bw[1] + step + bd[3]  # foot of the "g" is the lowest ink
     top, cx = (canvas - height) / 2, canvas / 2       # the whole group centred, as in the original
@@ -80,7 +81,7 @@ def build(canvas=CANVAS, colours=COLOURS):
     dd, idd = draw(serif, line, D, cx - (bd[0] + bd[2]) / 2, base_d)
     stars = ''.join(f'<path transform="translate({x} {y}) scale({k})" d="{STAR}"/>' for (x, y), k in STARS)
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {canvas} {canvas}" width="{canvas}" height="{canvas}">\n'
-           f'  <title>FKarim Web Design</title>\n'
+           f'  <title>{WORDMARK}, {LINE.lower()}</title>\n'
            f'  <rect width="{canvas}" height="{canvas}" fill="{colours["ground"]}"/>\n'
            f'  <g fill="{colours["stars"]}" transform="translate({cx - B / 2:.2f} {top:.2f}) scale({B / 100:.5f})">{stars}</g>\n'
            f'  <path fill="{colours["name"]}" d="{dw}"/>\n'

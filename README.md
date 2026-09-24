@@ -1,7 +1,7 @@
-# FKarim Web Design
+# Built by Fid
 
-The sales site for FKarim Web Design (renamed from BasilicaLabs Web Design),
-Fadil Karim's web design service, part of BasilicaLabs.AI: new websites and
+The sales site for Built by Fid, Fadil Karim's design studio, part of
+BasilicaLabs.AI (earlier BasilicaLabs Web Design, then FKarim Web Design): new websites and
 rebuilds, designed, built and live on a temporary link the same day. One page
 that makes the case and takes the brief, plus a themed 404.
 
@@ -28,8 +28,8 @@ public/
                           the brief form
     fonts/                Flux, Instrument Sans, Instrument Serif (upright and italic)
     img/work/             portfolio screenshots, WebP at 800 and 1400 wide
-    img/social-thumbnail-v2.8.jpg   link-preview thumbnail, 1200 × 630
-    img/social-square-v2.8.jpg      square post for Instagram, 1080 × 1080
+    img/social-thumbnail-v2.9.jpg   link-preview thumbnail, 1200 × 630
+    img/social-square-v2.9.jpg      square post for Instagram, 1080 × 1080
     img/favicon-v2.8.svg, img/apple-touch-icon-v2.8.png   the "F." mark
 social/                   sources for the social images (not served)
 brand/                    the square logo as SVG and PNG, and the script
@@ -59,7 +59,7 @@ Worker's Settings → Domains & Routes.
 
 - **Type.** Flux, the BasilicaLabs.AI brand face, sets the wordmark and every
   heading. It has one weight (500), so nothing is ever set bold in it.
-  Instrument Serif sets "Web Design", centred and upright under the wordmark,
+  Instrument Serif sets "Design Studio", centred and upright under the wordmark,
   and in italic one accent phrase per heading. Instrument Sans sets everything
   else. All three are
   self-hosted; Instrument Sans and Serif are SIL Open Font License.
@@ -97,11 +97,11 @@ the bottom of every page.
 
 ## Social images
 
-- **Link-preview thumbnail** (`public/assets/img/social-thumbnail-v2.8.jpg`,
+- **Link-preview thumbnail** (`public/assets/img/social-thumbnail-v2.9.jpg`,
   1200 × 630) — what social sites and messaging apps show when the link is
   shared. The name, the logo and the promise sit in the centre 600 px, so apps
   that crop previews to a square, such as WhatsApp, still show them.
-- **Square post** (`public/assets/img/social-square-v2.8.jpg`, 1080 × 1080) —
+- **Square post** (`public/assets/img/social-square-v2.9.jpg`, 1080 × 1080) —
   for Instagram and other feeds.
 
 Both are rendered from the HTML in `social/`, which uses the site's own fonts
@@ -122,7 +122,7 @@ point `og:image` and `twitter:image` at it.
 `brand/logo-square.svg` and `brand/logo-square.png` (1080 × 1080) are the logo
 for profile pictures and anywhere else a square mark is needed. The layout is
 the basilicalabs.ai square logo's, at its proportions: the three sparkle stars
-in emerald over "FKarim" in white, with "Web Design" centred underneath
+in emerald over "Built by Fid" in white, with "Design Studio" centred underneath
 in Instrument Serif, on the site's near-black. Everything sits within three
 quarters of the circle's radius, so a round crop keeps the whole logo.
 
@@ -145,7 +145,7 @@ npx playwright screenshot --viewport-size="1080, 1080" \
   confirmation, the visitor's email app opens with the brief filled in. After
   the domain goes live, send one test brief and click FormSubmit's activation
   link in the inbox.
-- **Share image.** `og:image` points at `public/assets/img/social-thumbnail-v2.8.jpg` in this
+- **Share image.** `og:image` points at `public/assets/img/social-thumbnail-v2.9.jpg` in this
   repository through jsDelivr's GitHub CDN, because link previews need an
   absolute address and the site has no domain yet.
 - **Links out.** The five portfolio sites, basilicalabs.ai, GitHub, YouTube,
@@ -170,5 +170,5 @@ In the `<head>` of `index.html`:
 <meta property="og:url" content="https://<domain>/">
 ```
 
-Point `og:image` and `twitter:image` at `https://<domain>/assets/img/social-thumbnail-v2.8.jpg`,
+Point `og:image` and `twitter:image` at `https://<domain>/assets/img/social-thumbnail-v2.9.jpg`,
 and add a `Sitemap:` line to `robots.txt` if a sitemap is added.

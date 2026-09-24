@@ -1,4 +1,4 @@
-/* FKarim Web Design: the page's small amount of behaviour.
+/* Built by Fid: the page's small amount of behaviour.
  * Everything is progressive: with no script, every section is visible, the
  * first showcase site shows, and the brief form falls back to email links.
  */

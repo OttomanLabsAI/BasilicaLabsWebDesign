@@ -4,8 +4,8 @@ Standing policy for this repository. Read it before making any change here.
 
 ## What this repo is
 
-The sales site for FKarim Web Design, Fadil Karim's web design service, part of
-BasilicaLabs.AI. It was called BasilicaLabs Web Design until v2.8. Version 2 is an original design, built from scratch to sell the
+The sales site for Built by Fid, Fadil Karim's design studio, part of
+BasilicaLabs.AI. It was BasilicaLabs Web Design until v2.7 and FKarim Web Design in v2.8. Version 2 is an original design, built from scratch to sell the
 service; it no longer copies basilicalabs.ai. A Cloudflare Workers static-assets
 site: everything served lives in `public/` and there is no build step - the
 files in that directory are the site. The repo is connected to Cloudflare
@@ -82,17 +82,18 @@ batches: implement, verify, commit, push.
 
 ## Design system
 
-- **Name and logo.** The site is "FKarim Web Design", renamed from
-  BasilicaLabs Web Design at the owner's request. The repository, the
+- **Name and logo.** The site is "Built by Fid", with "Design Studio" as the
+  line under the name; the owner renamed it from BasilicaLabs Web Design, then
+  FKarim Web Design. The repository, the
   Cloudflare Worker (`basilicalabswebdesign`) and the package name keep the old
   name, because renaming the Worker would cut it off from Workers Builds.
   BasilicaLabs.AI itself stays wherever it is the studio, its Instagram or a
   portfolio site. The favicon is the Flux "F" in paper on an ink tile with an
-  emerald full stop. The lockup is
-  "FKarim" in Flux with "Web Design" centred underneath in Instrument
+  emerald full stop (F for Fid). The lockup is
+  "Built by Fid" in Flux with "Design Studio" centred underneath in Instrument
   Serif - upright, never italic - in the accent colour.
   Its size is one token, `--logo-size`, scaling from 28.8px on the smallest
-  phones to 38.4px from tablets up; "Web Design" is .675 of it, and the
+  phones to 38.4px from tablets up; "Design Studio" is .675 of it, and the
   header height (`--header-h`) is derived from it. The owner asked for a big
   logo - do not shrink it. On phones the header holds only the logo and the
   preview button, which never shrinks or wraps.
@@ -120,8 +121,8 @@ batches: implement, verify, commit, push.
   joins the values of overlapping rules. Fonts and images are cached as
   immutable, so a changed font or image needs a new file name.
 - **Social images.** The link-preview thumbnail
-  (`assets/img/social-thumbnail-v2.8.jpg`, 1200 × 630) and a square post
-  (`assets/img/social-square-v2.8.jpg`, 1080 × 1080) are rendered from
+  (`assets/img/social-thumbnail-v2.9.jpg`, 1200 × 630) and a square post
+  (`assets/img/social-square-v2.9.jpg`, 1080 × 1080) are rendered from
   `social/thumbnail.html` and `social/square.html` with the site's own fonts.
   Keep the thumbnail's logo, headline and chips inside the centre 600 px so a
   square crop (WhatsApp) still shows them, and check it at small sizes. A
@@ -132,7 +133,7 @@ batches: implement, verify, commit, push.
 - **Square logo.** `brand/logo-square.svg` and `.png` (1080 × 1080) are the
   owner's chosen layout: basilicalabs.ai's square logo (the three sparkle stars
   stacked over the wordmark, at the proportions measured from the original),
-  with the stars in the accent, "FKarim" in paper, "Web Design" in
+  with the stars in the accent, "Built by Fid" in paper, "Design Studio" in
   accent-bright centred underneath, on ink. `brand/make_logo.py` draws the SVG
   from the site's fonts with the lettering outlined; change the script and
   redraw, then re-export the PNG, rather than editing either file by hand. Keep
@@ -178,3 +179,4 @@ batches: implement, verify, commit, push.
 | v2.6 | The Dynamic Connectome Lab joins the recent work | The live preview you made for the Dynamic Connectome Lab now leads your recent work in a card of its own, and it takes its turn in the showcase at the top of the page and among the recent builds. The card presents it as what it is, a preview rebuilt from the lab's Google Site, and calls out the brain's wiring drawing itself, the research figures you can play with and the searchable publications. |
 | v2.7 | A leaner page that says everything once | The page now makes each point once: the two floating notes beside the showcase, the ticks under the headline, the band of three promises, the FAQ and every line that repeated its neighbour are gone, leaving a page about a fifth shorter with free Cloudflare hosting folded into the opening paragraph. Long dashes are gone too, replaced by full stops, commas and colons wherever a visitor reads. |
 | v2.8 | BasilicaLabs Web Design becomes FKarim Web Design | The service now goes by FKarim Web Design everywhere it shows its name: the logo at the top and foot of every page, the page title, the comparison table, the preview that appears when the link is shared, the square Instagram post and the square logo. The icon in the browser tab now shows an F in place of the B, while your BasilicaLabs.AI studio, Instagram and portfolio site keep their own names. |
+| v2.9 | FKarim Web Design becomes Built by Fid | The site now goes by Built by Fid, with Design Studio set in emerald beneath the name in the logo at the top and foot of every page. The new name carries through the page title, the comparison table, the preview that appears when the link is shared, the square Instagram post and the square logo, and the F in the browser tab now stands for Fid. |

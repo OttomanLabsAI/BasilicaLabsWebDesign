@@ -1,8 +1,8 @@
 {
   "name": "basilicalabswebdesign",
-  "version": "2.8.0",
+  "version": "2.9.0",
   "private": true,
-  "description": "FKarim Web Design - the sales site for the web design service. Cloudflare Workers static assets, no build step.",
+  "description": "Built by Fid - the sales site for Fadil Karim's design studio. Cloudflare Workers static assets, no build step.",
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
