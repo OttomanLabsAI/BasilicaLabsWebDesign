@@ -1,6 +1,7 @@
-# BasilicaLabs Web Design
+# FKarim Web Design
 
-The sales site for the BasilicaLabs.AI web design service: new websites and
+The sales site for FKarim Web Design (renamed from BasilicaLabs Web Design),
+Fadil Karim's web design service, part of BasilicaLabs.AI: new websites and
 rebuilds, designed, built and live on a temporary link the same day. One page
 that makes the case and takes the brief, plus a themed 404.
 
@@ -27,9 +28,9 @@ public/
                           the brief form
     fonts/                Flux, Instrument Sans, Instrument Serif (upright and italic)
     img/work/             portfolio screenshots, WebP at 800 and 1400 wide
-    img/social-thumbnail-v2.4.jpg   link-preview thumbnail, 1200 × 630
-    img/social-square-v2.4.jpg      square post for Instagram, 1080 × 1080
-    img/favicon-v2.1.svg, img/apple-touch-icon-v2.1.png
+    img/social-thumbnail-v2.8.jpg   link-preview thumbnail, 1200 × 630
+    img/social-square-v2.8.jpg      square post for Instagram, 1080 × 1080
+    img/favicon-v2.8.svg, img/apple-touch-icon-v2.8.png   the "F." mark
 social/                   sources for the social images (not served)
 brand/                    the square logo as SVG and PNG, and the script
                           that draws it (not served)
@@ -96,11 +97,11 @@ the bottom of every page.
 
 ## Social images
 
-- **Link-preview thumbnail** (`public/assets/img/social-thumbnail-v2.4.jpg`,
+- **Link-preview thumbnail** (`public/assets/img/social-thumbnail-v2.8.jpg`,
   1200 × 630) — what social sites and messaging apps show when the link is
   shared. The name, the logo and the promise sit in the centre 600 px, so apps
   that crop previews to a square, such as WhatsApp, still show them.
-- **Square post** (`public/assets/img/social-square-v2.4.jpg`, 1080 × 1080) —
+- **Square post** (`public/assets/img/social-square-v2.8.jpg`, 1080 × 1080) —
   for Instagram and other feeds.
 
 Both are rendered from the HTML in `social/`, which uses the site's own fonts
@@ -121,7 +122,7 @@ point `og:image` and `twitter:image` at it.
 `brand/logo-square.svg` and `brand/logo-square.png` (1080 × 1080) are the logo
 for profile pictures and anywhere else a square mark is needed. The layout is
 the basilicalabs.ai square logo's, at its proportions: the three sparkle stars
-in emerald over "BasilicaLabs" in white, with "Web Design" centred underneath
+in emerald over "FKarim" in white, with "Web Design" centred underneath
 in Instrument Serif, on the site's near-black. Everything sits within three
 quarters of the circle's radius, so a round crop keeps the whole logo.
 
@@ -144,7 +145,7 @@ npx playwright screenshot --viewport-size="1080, 1080" \
   confirmation, the visitor's email app opens with the brief filled in. After
   the domain goes live, send one test brief and click FormSubmit's activation
   link in the inbox.
-- **Share image.** `og:image` points at `public/assets/img/social-thumbnail-v2.4.jpg` in this
+- **Share image.** `og:image` points at `public/assets/img/social-thumbnail-v2.8.jpg` in this
   repository through jsDelivr's GitHub CDN, because link previews need an
   absolute address and the site has no domain yet.
 - **Links out.** The five portfolio sites, basilicalabs.ai, GitHub, YouTube,
@@ -169,5 +170,5 @@ In the `<head>` of `index.html`:
 <meta property="og:url" content="https://<domain>/">
 ```
 
-Point `og:image` and `twitter:image` at `https://<domain>/assets/img/social-thumbnail-v2.4.jpg`,
+Point `og:image` and `twitter:image` at `https://<domain>/assets/img/social-thumbnail-v2.8.jpg`,
 and add a `Sitemap:` line to `robots.txt` if a sitemap is added.

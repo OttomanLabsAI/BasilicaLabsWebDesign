@@ -1,8 +1,8 @@
-"""Draw the square BasilicaLabs Web Design logo as a self-contained SVG.
+"""Draw the square FKarim Web Design logo as a self-contained SVG.
 
 The composition is basilicalabs.ai's square logo (assets/brand/logo-square-*.png
 in that site's repository): the three sparkle stars stacked over the wordmark,
-at the same proportions. Here the stars are emerald, "BasilicaLabs" is white on
+at the same proportions. Here the stars are emerald, "FKarim" is white on
 ink, and "Web Design" sits centred underneath in Instrument Serif, as it does
 in the site's header. The lettering is shaped with HarfBuzz and converted to
 outlines, so the file needs no fonts.
@@ -69,7 +69,7 @@ def build(canvas=CANVAS, colours=COLOURS):
     flux, serif = load('flux.woff2'), load('instrument-serif-latin.woff2')
     S = NAME * canvas; D = .675 * S                  # the site's lockup: "Web Design" at .675 of the name
     B = CLUSTER * canvas; H = .96 * B                # the cluster's ink fills its 100 x 96 box
-    name = run(flux, 'BasilicaLabs', .004); line = run(serif, 'Web Design', .01)
+    name = run(flux, 'FKarim', .004); line = run(serif, 'Web Design', .01)
     _, bw = draw(flux, name, S, 0, 0); _, bd = draw(serif, line, D, 0, 0)    # ink boxes at the origin
     # stacked as in the site's CSS: the two line boxes .08em (of "Web Design") apart
     step = S - line_top_to_baseline(flux, S) + .08 * D + line_top_to_baseline(serif, D)
@@ -80,7 +80,7 @@ def build(canvas=CANVAS, colours=COLOURS):
     dd, idd = draw(serif, line, D, cx - (bd[0] + bd[2]) / 2, base_d)
     stars = ''.join(f'<path transform="translate({x} {y}) scale({k})" d="{STAR}"/>' for (x, y), k in STARS)
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {canvas} {canvas}" width="{canvas}" height="{canvas}">\n'
-           f'  <title>BasilicaLabs Web Design</title>\n'
+           f'  <title>FKarim Web Design</title>\n'
            f'  <rect width="{canvas}" height="{canvas}" fill="{colours["ground"]}"/>\n'
            f'  <g fill="{colours["stars"]}" transform="translate({cx - B / 2:.2f} {top:.2f}) scale({B / 100:.5f})">{stars}</g>\n'
            f'  <path fill="{colours["name"]}" d="{dw}"/>\n'
