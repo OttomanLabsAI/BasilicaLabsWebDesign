@@ -12,8 +12,8 @@ in `public/` are the site.
 ```
 public/
   index.html              the sales page: hero, work, process, what you get,
-                          how it's done, comparison, ownership, FAQ,
-                          referrals, and the brief form
+                          how it's done, comparison, ownership, referrals,
+                          and the brief form
   404.html                themed not-found page (root-absolute paths)
                           both pages end with the fixed contact bar:
                           call, email and Instagram, always on screen
@@ -67,8 +67,8 @@ Worker's Settings → Domains & Routes.
   text on ink, `#036144` for text on paper, with ink text on emerald fills.
   The accent lives in five tokens at the top of `site.css`, so a recolour is a
   few-line change. Every text pairing meets WCAG AA.
-- **Motion.** A crossfading showcase of the five sites, gentle floating cards,
-  a flowing lane diagram and scroll reveals. All of it stops under
+- **Motion.** A crossfading showcase of the five sites, a flowing lane
+  diagram and scroll reveals. All of it stops under
   `prefers-reduced-motion`, and with no script every section is visible.
 
 ## Content rules
@@ -81,6 +81,11 @@ Worker's Settings → Domains & Routes.
   cost.
 - Every claim comes from the service as the owner describes it. No invented
   testimonials, figures or clients.
+- Each point is made once. The hero states the promise and each section below
+  adds something new; no section restates another, and there is no FAQ for
+  that reason.
+- No long dashes (— or –) in anything a visitor reads, titles and
+  screen-reader labels included. A full stop, comma or colon does the job.
 
 ## Contact details on the page
 

@@ -1,4 +1,4 @@
-/* BasilicaLabs Web Design — the page's small amount of behaviour.
+/* BasilicaLabs Web Design: the page's small amount of behaviour.
  * Everything is progressive: with no script, every section is visible, the
  * first showcase site shows, and the brief form falls back to email links.
  */
@@ -94,10 +94,10 @@
         return;
       }
       // honeypot filled: a bot, so pretend all is well
-      if (field('fHoney').value) { setStatus('Thanks — your brief is on its way.', 'ok'); form.reset(); return; }
+      if (field('fHoney').value) { setStatus('Thanks, your brief is on its way.', 'ok'); form.reset(); return; }
 
       var data = new FormData(form);
-      data.set('_subject', 'Website brief — ' + name + ': ' + (business || site).slice(0, 60));
+      data.set('_subject', 'Website brief from ' + name + ': ' + (business || site).slice(0, 60));
       data.set('_captcha', 'false');
       data.set('_template', 'table');
 
@@ -106,7 +106,7 @@
           (site ? '\nCurrent website: ' + site : '') + (more ? '\n\n' + more : '') +
           '\n\nFrom: ' + name + ' <' + email + '>';
         setStatus(reason + ' Opening your email app with the brief filled in…', 'err');
-        window.location.href = 'mailto:' + INBOX + '?subject=' + encodeURIComponent('Website brief — ' + name) +
+        window.location.href = 'mailto:' + INBOX + '?subject=' + encodeURIComponent('Website brief from ' + name) +
           '&body=' + encodeURIComponent(body);
       };
 
@@ -117,7 +117,7 @@
         .then(function(r){
           var msg = r.body && (r.body.message || r.body.error);
           if (r.ok && String(r.body.success) !== 'false') {
-            setStatus('Thanks, ' + name.split(' ')[0] + ' — your brief is in. Your preview is on its way.', 'ok');
+            setStatus('Thanks, ' + name.split(' ')[0] + '. Your brief is in, and your preview is on its way.', 'ok');
             form.reset();
           } else if (msg && /activat/i.test(msg)) {
             // the form service is waiting on its one-time confirmation: send by email so nothing is lost

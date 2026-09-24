@@ -67,6 +67,16 @@ batches: implement, verify, commit, push.
   live preview made for the lab, not a commissioned build: keep it labelled as
   a preview and never present the lab as a client. No invented testimonials,
   figures or clients.
+- **Say it once.** The owner cut the repetition: the hero states the promise
+  (one line or a link, live on a temporary link the same day, yours on your
+  own domain with hosting free forever, or walk away), and every section below
+  adds something new. Before adding copy, check the point is not already made
+  elsewhere on the page; there is no FAQ because every answer repeated a
+  section. Contact details are the exception: they sit by the form, in the
+  footer and in the contact bar on purpose.
+- **No long dashes.** Nothing a visitor reads uses an em or en dash (— or –),
+  including titles, meta descriptions, alt text, screen-reader labels and the
+  form's messages. Use a full stop, comma or colon instead.
 - **Contact details.** Phone +44 7713 563722, fid_kk@proton.me, Instagram
   @BasilicaLabs.AI (renamed from @ottomanlabs.ai) and @fid_900.
 
@@ -160,3 +170,4 @@ batches: implement, verify, commit, push.
 | v2.4 | A bigger logo everywhere it appears | The BasilicaLabs Web Design logo is now about half as big again in the header, footer and 404 page, scaling down neatly on phones, and it stands larger on the link thumbnail and the square Instagram post too. On the smallest phones the preview button also stays on one line beside it. |
 | v2.5 | A square logo with the BasilicaLabs stars | The brand now has a square logo built like the basilicalabs.ai one: the three stars in emerald above BasilicaLabs in white, with Web Design underneath, on black. It fits neatly inside a round crop for an Instagram profile picture, and comes as a ready-to-post image and as a file that stays sharp at any size. |
 | v2.6 | The Dynamic Connectome Lab joins the recent work | The live preview you made for the Dynamic Connectome Lab now leads your recent work in a card of its own, and it takes its turn in the showcase at the top of the page and among the recent builds. The card presents it as what it is, a preview rebuilt from the lab's Google Site, and calls out the brain's wiring drawing itself, the research figures you can play with and the searchable publications. |
+| v2.7 | A leaner page that says everything once | The page now makes each point once: the two floating notes beside the showcase, the ticks under the headline, the band of three promises, the FAQ and every line that repeated its neighbour are gone, leaving a page about a fifth shorter with free Cloudflare hosting folded into the opening paragraph. Long dashes are gone too, replaced by full stops, commas and colons wherever a visitor reads. |
