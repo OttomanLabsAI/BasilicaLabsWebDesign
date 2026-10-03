@@ -159,7 +159,11 @@ the Dynamic Connectome Lab, leads the cards across both columns. It is a live
 preview made for the lab from its Google Site, not a commissioned build, and
 its card says so. To add a site, screenshot its homepage at 1400 × 735, save
 it as WebP at 1400 and 800 wide in `assets/img/work/`, and add it in all three
-places; the showcase script picks up any number of slides.
+places; the showcase script picks up any number of slides. A changed screenshot gets
+a new file name, as the Dynamic Connectome Lab's did when its homepage moved
+the brain up beside the lab's name (`-v2.10`). If a homepage's first screen
+ends above 735 px, capture at a smaller 40:21 size, such as 1280 × 672 at
+twice the pixel density, and scale it to 1400 × 735 so no white strip shows.
 
 ## When the domain is chosen
 
